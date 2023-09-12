@@ -29,8 +29,6 @@ dependencies:
 
   flutter_localizations:
     sdk: flutter
-  bc_upgrade:
-    path: module/bc_upgrade
 dev_dependencies:
   flutter_test:
     sdk: flutter
