@@ -12,16 +12,16 @@ import 'package:x_framework/util/index.dart';
 
 abstract class XyBaseProvider<T> extends XBaseProvider<T> {
   XConverterFactory get converterFactory =>
-      yBaseProviderBuilder.converterFactory;
+      xBaseProviderBuilder.converterFactory;
 
   @override
-  XBaseProviderBuilder get yBaseProviderBuilder;
+  XBaseProviderBuilder get xBaseProviderBuilder;
 
   @override
   Future<BaseNetEntity<T>> load() async {
-    final dio = _getYDio();
+    final dio = _getXDio();
     if (dio == null) {
-      throw PersistenceException('请配置YDio');
+      throw PersistenceException('请配置XDio');
     }
     _log('request',
         'Api：${requestBean.requestUrl}----RequestParams：${json.encode(requestBean.requestParams)}');
@@ -75,7 +75,7 @@ abstract class XyBaseProvider<T> extends XBaseProvider<T> {
   }
 
   _log(String event, String info) {
-    yBaseProviderBuilder.log
+    xBaseProviderBuilder.log
         .logI('ProviderLog===>Event is {$event},Info is {$info}');
   }
 
@@ -86,8 +86,8 @@ abstract class XyBaseProvider<T> extends XBaseProvider<T> {
     }
   }
 
-  XDio? _getYDio() {
-    return yBaseProviderBuilder.dio;
+  XDio? _getXDio() {
+    return xBaseProviderBuilder.dio;
   }
 
   @override

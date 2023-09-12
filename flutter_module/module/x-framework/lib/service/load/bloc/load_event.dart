@@ -2,7 +2,7 @@ import 'package:x_framework/base/base_event.dart';
 
 import 'bloc.dart';
 
-abstract class LoadEvent extends YBaseEvent<LoadBloc, LoadState> {}
+abstract class LoadEvent extends XBaseEvent<LoadBloc, LoadState> {}
 
 class LoadingEvent extends LoadEvent {
   @override

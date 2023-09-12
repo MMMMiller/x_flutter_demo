@@ -1,5 +1,5 @@
 import 'package:flutter_module/generated/json/base/json_convert_content.dart';
-import 'package:flutter_module/domain/model/cms_entity.dart';
+import 'package:flutter_module/module/cms/domain/model/cms_entity.dart';
 
 CmsEntity $CmsEntityFromJson(Map<String, dynamic> json) {
   final CmsEntity cmsEntity = CmsEntity();

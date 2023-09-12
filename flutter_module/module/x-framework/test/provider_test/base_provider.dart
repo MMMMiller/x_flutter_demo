@@ -25,7 +25,7 @@ abstract class BaseProvider<T> extends XBaseProvider<T> {
   CustomProvider _customProvider = CustomProvider();
 
   @override
-  XBaseProviderBuilder get yBaseProviderBuilder => _customProvider;
+  XBaseProviderBuilder get xBaseProviderBuilder => _customProvider;
 
   @override
   Future<BaseNetEntity<T>> load() async {
@@ -33,7 +33,7 @@ abstract class BaseProvider<T> extends XBaseProvider<T> {
         'Api：${requestBean.requestUrl}----RequestParams：${json.encode(requestBean.requestParams)}');
     var dio = _customProvider.dio;
     if (dio == null) {
-      throw PersistenceException("请配置YDio");
+      throw PersistenceException("请配置XDio");
     }
     var data;
     switch (requestBean.requestType) {

@@ -20,7 +20,7 @@ class BlocLoadContainer extends BaseStatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return YBlocLoadView(
+    return XBlocLoadView(
       isInitLoading: true,
       loadingWidget: loadingWidget ??
           Center(

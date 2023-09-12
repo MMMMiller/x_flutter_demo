@@ -3,7 +3,7 @@ import 'package:common_lib/service/multi_data_change/bloc/multi_check_bloc.dart'
 import 'package:common_lib/service/multi_data_change/bloc/multi_check_state.dart';
 
 abstract class BcMultiCheckEvent<T>
-    extends YBaseEvent<BcMultiCheckBloc<T>, BcMultiCheckState<T>> {
+    extends XBaseEvent<BcMultiCheckBloc<T>, BcMultiCheckState<T>> {
   BcMultiCheckEvent();
 }
 

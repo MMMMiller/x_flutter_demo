@@ -3,10 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
-import 'package:flutter_module/pages/user/login_page.dart';
-import 'package:flutter_module/pages/user/reset_pwd_page.dart';
-import '../pages/app_root_page.dart';
-import '../pages/search_page.dart';
+import 'package:flutter_module/app_root_page.dart';
+import 'package:flutter_module/module/cms/page/cms_page.dart';
+import 'package:flutter_module/module/user/page/login_page.dart';
+import 'package:flutter_module/module/user/page/reset_pwd_page.dart';
 
 class AppRouter {
   static Map<String, FlutterBoostRouteFactory> routerMap = {
@@ -28,7 +28,7 @@ class AppRouter {
     'main/search_page': (settings, uniqueId) {
       return CupertinoPageRoute(
         settings: settings,
-        builder: (_) => SearchPage(),
+        builder: (_) => CMSPage(),
       );
     },
 

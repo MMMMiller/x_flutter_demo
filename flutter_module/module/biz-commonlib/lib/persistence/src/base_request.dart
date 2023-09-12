@@ -13,6 +13,6 @@ abstract class BaseRequest<T> extends XyBaseProvider<T> {
   String get providerKey => CommonProvider.key;
 
   @override
-  CommonBaseProviderBuilder get yBaseProviderBuilder =>
+  CommonBaseProviderBuilder get xBaseProviderBuilder =>
       ProviderService.find(providerKey);
 }

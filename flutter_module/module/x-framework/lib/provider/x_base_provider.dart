@@ -11,7 +11,7 @@
 import 'package:x_framework/index.dart';
 
 abstract class XBaseProvider<T> {
-  XBaseProviderBuilder get yBaseProviderBuilder;
+  XBaseProviderBuilder get xBaseProviderBuilder;
 
   Future<BaseNetEntity<T>> load();
 
@@ -23,7 +23,7 @@ abstract class XBaseProvider<T> {
 
   String get cacheTag => requestBean.cacheTag;
 
-  XLocalStorage get localStorage => yBaseProviderBuilder.localStorage;
+  XLocalStorage get localStorage => xBaseProviderBuilder.localStorage;
 
   String get localCacheKey => _createKey();
 

@@ -14,14 +14,14 @@ import 'package:x_framework/service/load/bloc/bloc.dart';
 
 typedef ErrorBuilder = Widget Function(Exception exception);
 
-class YBlocLoadView extends StatelessWidget {
+class XBlocLoadView extends StatelessWidget {
   final LoadBloc loadBloc;
   final Widget child;
   final Widget? loadingWidget;
   final ErrorBuilder errorBuilder;
   final bool isInitLoading;
 
-  const YBlocLoadView(
+  const XBlocLoadView(
       {Key? key,
       required this.child,
       required this.loadBloc,

@@ -2,7 +2,7 @@ part of 'app_start_config_bloc.dart';
 
 
 abstract class AppStartConfigEvent
-    extends YBaseEvent<AppStartConfigBloc, AppStartConfigState> {
+    extends XBaseEvent<AppStartConfigBloc, AppStartConfigState> {
   AppStartConfigEvent();
 }
 

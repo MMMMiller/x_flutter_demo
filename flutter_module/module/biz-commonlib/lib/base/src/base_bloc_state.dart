@@ -3,7 +3,7 @@ import 'package:common_lib/index.dart';
 import 'package:flutter/material.dart';
 
 abstract class BaseBlocState<T extends StatefulWidget> extends BaseUIState<T>
-    with YBaseState<T>, ViewToBloc {
+    with XBaseState<T>, ViewToBloc {
   static ViewEventObserver viewEventObserver = ViewEventObserver();
 
   bool _isShowLoadingDialog = false;

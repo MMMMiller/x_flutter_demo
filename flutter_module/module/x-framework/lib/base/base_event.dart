@@ -14,7 +14,7 @@ import 'package:x_framework/net/exception/exception.dart';
 import 'base_bloc.dart';
 import 'base_net_entity.dart';
 
-abstract class YBaseEvent<B, S> extends BaseEvent {
+abstract class XBaseEvent<B, S> extends BaseEvent {
   Stream<S> applyAsync(B bloc, S currentState);
 }
 

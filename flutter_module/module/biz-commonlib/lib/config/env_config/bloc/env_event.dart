@@ -3,7 +3,7 @@ import 'package:x_framework/base/index.dart';
 import '../env/env.dart';
 import 'env_state.dart';
 import 'env_bloc.dart';
-abstract class EnvEvent extends YBaseEvent<EnvBloc, EnvState> {}
+abstract class EnvEvent extends XBaseEvent<EnvBloc, EnvState> {}
 
 class ChangeEnvEvent extends EnvEvent {
   final Env env;

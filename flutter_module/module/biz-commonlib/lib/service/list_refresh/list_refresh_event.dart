@@ -2,7 +2,7 @@ part of 'list_refresh_bloc.dart';
 
 @immutable
 abstract class ListRefreshEvent<T>
-    extends YBaseEvent<ListRefreshBloc<T>, ListRefreshState<T>> {
+    extends XBaseEvent<ListRefreshBloc<T>, ListRefreshState<T>> {
   void _checkListResult(ListRefreshBloc<T> bloc, result) {
     if (!isSuccess(result)) {
       handlerException(bloc, result);

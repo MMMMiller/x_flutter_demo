@@ -6,7 +6,7 @@ import 'package:common_lib/service/list_refresh/list_refresh_bloc.dart';
 import 'package:common_lib/service/router/common_router.dart';
 import 'package:common_lib/service/router/router_util.dart';
 
-class YDefaultBlocDelegate extends BlocObserver {
+class XDefaultBlocDelegate extends BlocObserver {
   @override
   void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
     super.onError(bloc, error, stackTrace);

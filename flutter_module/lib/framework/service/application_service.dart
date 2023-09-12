@@ -44,7 +44,7 @@ class ApplicationService {
       interceptors: [ApplicationInterceptors()],
     );
     // 添加bloc中间件
-    Bloc.observer = YDefaultBlocDelegate();
+    Bloc.observer = XDefaultBlocDelegate();
 
     final env = AppSp.getEnv();
     if(env.isEmpty || env == ''){

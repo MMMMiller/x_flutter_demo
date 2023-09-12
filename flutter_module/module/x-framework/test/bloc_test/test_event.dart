@@ -1,7 +1,7 @@
 part of 'test_bloc.dart';
 
 @immutable
-abstract class TestEvent extends YBaseEvent<TestBloc, TestState> {}
+abstract class TestEvent extends XBaseEvent<TestBloc, TestState> {}
 
 class ChangeDataEvent extends TestEvent {
   final int data;

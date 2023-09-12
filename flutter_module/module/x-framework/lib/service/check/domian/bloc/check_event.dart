@@ -1,7 +1,7 @@
 import 'package:x_framework/base/base_event.dart';
 import 'package:x_framework/service/check/domian/bloc/bloc.dart';
 
-abstract class CheckEvent extends YBaseEvent<CheckBloc, CheckState> {
+abstract class CheckEvent extends XBaseEvent<CheckBloc, CheckState> {
   CheckEvent();
 }
 

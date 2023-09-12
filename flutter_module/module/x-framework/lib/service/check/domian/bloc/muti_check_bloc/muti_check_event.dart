@@ -3,7 +3,7 @@ import 'package:x_framework/net/exception/exception.dart';
 import 'package:x_framework/service/check/domian/bloc/muti_check_bloc/bloc.dart';
 
 
-abstract class MutiCheckEvent extends YBaseEvent<MutiCheckBloc, MutiCheckState> {
+abstract class MutiCheckEvent extends XBaseEvent<MutiCheckBloc, MutiCheckState> {
   MutiCheckEvent();
 }
 

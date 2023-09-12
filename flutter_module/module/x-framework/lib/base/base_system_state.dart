@@ -3,7 +3,7 @@ import 'package:x_framework/net/exception/exception.dart';
 import 'package:x_framework/util/index.dart';
 import 'package:x_framework/base/base_bloc.dart';
 
-mixin YBaseState<T extends StatefulWidget> on State<T> {
+mixin XBaseState<T extends StatefulWidget> on State<T> {
   final List<BaseAppBloc> _mList = [];
 
   void injectBloc(BaseAppBloc bloc) {

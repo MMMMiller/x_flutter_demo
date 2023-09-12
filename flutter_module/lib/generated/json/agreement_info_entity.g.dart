@@ -1,5 +1,5 @@
 import 'package:flutter_module/generated/json/base/json_convert_content.dart';
-import 'package:flutter_module/domain/user/model/agreement_info_entity.dart';
+import 'package:flutter_module/module/user/domain/model/agreement_info_entity.dart';
 
 AgreementInfoEntity $AgreementInfoEntityFromJson(Map<String, dynamic> json) {
   final AgreementInfoEntity agreementInfoEntity = AgreementInfoEntity();

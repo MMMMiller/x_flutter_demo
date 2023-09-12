@@ -1,5 +1,5 @@
 import 'package:flutter_module/generated/json/base/json_convert_content.dart';
-import 'package:flutter_module/domain/user/model/login_info_entity.dart';
+import 'package:flutter_module/module/user/domain/model/login_info_entity.dart';
 
 LoginInfoEntity $LoginInfoEntityFromJson(Map<String, dynamic> json) {
   final LoginInfoEntity loginInfoEntity = LoginInfoEntity();

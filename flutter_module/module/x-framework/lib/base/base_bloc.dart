@@ -14,7 +14,7 @@ import 'package:x_framework/service/load/bloc/bloc.dart';
 import 'base_event.dart';
 export 'package:flutter/foundation.dart';
 
-abstract class BaseAppBloc<Event extends YBaseEvent, State>
+abstract class BaseAppBloc<Event extends XBaseEvent, State>
     extends Bloc<Event, State> {
   BaseAppBloc(State initialState) : super(initialState);
 
@@ -45,7 +45,7 @@ abstract class BaseLoadBloc<Event extends BaseEvent, State>
 }
 
 abstract class BaseBloc<Event extends BaseEvent, State>
-    extends BaseAppBloc<YBaseEvent, State> {
+    extends BaseAppBloc<XBaseEvent, State> {
   ViewToBloc? view;
 
   final LoadBloc _loadBloc = LoadBloc(InitialState());

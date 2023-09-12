@@ -8,7 +8,7 @@ import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_module/framework/service/application_service.dart';
 
 import 'flutter_app.dart';
-import 'utils/native_messenger.dart';
+import 'common/util/native_messenger.dart';
 
 void main() {
   runZonedGuarded(() async {

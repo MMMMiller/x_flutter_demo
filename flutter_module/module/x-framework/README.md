@@ -194,9 +194,9 @@ Log.w('xxx')
 - Bloc拦截器（负责拦截bloc中的事件，状态变更以及统一容错处理）
 
 ```
- Bloc.observer = YDefaultBlocDelegate();
+ Bloc.observer = XDefaultBlocDelegate();
 
- class YDefaultBlocDelegate extends BlocObserver with ErrorDeal {
+ class XDefaultBlocDelegate extends BlocObserver with ErrorDeal {
   @override
   void onEvent(Bloc bloc, Object event) {
     super.onEvent(bloc, event);
