@@ -1,0 +1,37 @@
+class BcCommonImage {
+	static const icWechat = 'packages/common_lib/assets/images/ic_wechat.png';
+	static const icEmptyVideoCamera = 'packages/common_lib/assets/images/ic_empty_video_camera.png';
+	static const icGeneral = 'packages/common_lib/assets/images/ic_general.png';
+	static const icPrivateTagThere = 'packages/common_lib/assets/images/ic_private_tag_there.png';
+	static const tabIconChatHl = 'packages/common_lib/assets/images/tab_icon_chat_hl.png';
+	static const icErrorEmpty = 'packages/common_lib/assets/images/ic_error_empty.png.png';
+	static const icEyeVisible = 'packages/common_lib/assets/images/ic_eye_visible.png';
+	static const icCustomerAvatar = 'packages/common_lib/assets/images/ic_customer_avatar.png';
+	static const icEmptyImage = 'packages/common_lib/assets/images/ic_empty_image.png';
+	static const icClose = 'packages/common_lib/assets/images/ic_close.png';
+	static const icEmptyUserGroup = 'packages/common_lib/assets/images/ic_empty_user_group.png';
+	static const icPrivateTagTwo = 'packages/common_lib/assets/images/ic_private_tag_two.png';
+	static const pageEmpty = 'packages/common_lib/assets/images/page_empty.png';
+	static const icEmptyDollarHor = 'packages/common_lib/assets/images/ic_empty_dollar_hor.png';
+	static const tabIconHomeHl = 'packages/common_lib/assets/images/tab_icon_home_hl.png';
+	static const icDelete = 'packages/common_lib/assets/images/ic_delete.png';
+	static const icDefaultSearchEmpty = 'packages/common_lib/assets/images/ic_default_search_empty.png';
+	static const icEmptyVideo = 'packages/common_lib/assets/images/ic_empty_video.png';
+	static const tabIconChat = 'packages/common_lib/assets/images/tab_icon_chat.png';
+	static const tabIconInvest = 'packages/common_lib/assets/images/tab_icon_invest.png';
+	static const icEyeInvisible = 'packages/common_lib/assets/images/ic_eye_invisible.png';
+	static const icEmptyDollar = 'packages/common_lib/assets/images/ic_empty_dollar.png';
+	static const tabIconMineHl = 'packages/common_lib/assets/images/tab_icon_mine_hl.png';
+	static const icPrivateTagOne = 'packages/common_lib/assets/images/ic_private_tag_one.png';
+	static const searchEmpty = 'packages/common_lib/assets/images/search_empty.png';
+	static const icAvatarDefaultGray = 'packages/common_lib/assets/images/ic_avatar_default_gray.png';
+	static const NetworkError = 'packages/common_lib/assets/images/NetworkError.png';
+	static const ic404Empty = 'packages/common_lib/assets/images/ic_404_empty.png';
+	static const icVideoImg = 'packages/common_lib/assets/images/ic_video_img.png';
+	static const icEmptySound = 'packages/common_lib/assets/images/ic_empty_sound.png';
+	static const tabIconMine = 'packages/common_lib/assets/images/tab_icon_mine.png';
+	static const icNotContent = 'packages/common_lib/assets/images/ic_not_content.png';
+	static const icLogoutEmpty = 'packages/common_lib/assets/images/ic_logout_empty.png';
+	static const tabIconInvestHl = 'packages/common_lib/assets/images/tab_icon_invest_hl.png';
+	static const tabIconHome = 'packages/common_lib/assets/images/tab_icon_home.png';
+}

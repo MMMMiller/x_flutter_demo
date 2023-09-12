@@ -1,0 +1,45 @@
+name: flutter_module
+description: flutter_demo_ios
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_boost:
+    git:
+      url: 'https://github.com/alibaba/flutter_boost.git'
+      ref: '4.4.0'
+
+  cupertino_icons: ^1.0.2
+
+  common_lib:
+    path: module/biz-commonlib
+
+  bc_user_module:
+    path: module/bc_user_module
+  bc_user_api:
+    path: module/bc_user_api
+
+  flutter_localizations:
+    sdk: flutter
+  bc_upgrade:
+    path: module/bc_upgrade
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+
+  module:
+    androidX: true
+    androidPackage: com.example.flutter_module
+    iosBundleIdentifier: com.example.flutterModule

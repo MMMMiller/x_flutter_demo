@@ -1,0 +1,30 @@
+platform :ios,'11.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'FlutterBoostPro' do
+  # Comment the next line if you don't want to use dynamic frameworks
+    use_frameworks!
+  
+  pod 'AppleDevices'
+  pod 'FDFullscreenPopGesture'
+  pod 'JKRetractableGCDDelay'
+  pod 'Masonry'
+  
+  flutter_application_path = '../flutter_module/'
+  load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+  install_all_flutter_pods(flutter_application_path)
+
+end
+
+post_install do |installer|
+  
+  flutter_post_install(installer) if defined?(flutter_post_install)
+
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      # 去除警告：target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99.
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+    end
+  end
+end
