@@ -1,7 +1,7 @@
 
-import 'package:bc_user_module/main.dart';
 import 'package:common_lib/base/index.dart';
 import 'package:common_lib/main.dart';
+import 'package:flutter_module/pages/user/main.dart';
 
 
 ///文件名:    module_service

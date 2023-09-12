@@ -17,20 +17,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.11.0"
-  bc_user_api:
-    dependency: "direct main"
-    description:
-      path: "module/bc_user_api"
-      relative: true
-    source: path
-    version: "1.0.0+1"
-  bc_user_module:
-    dependency: "direct main"
-    description:
-      path: "module/bc_user_module"
-      relative: true
-    source: path
-    version: "1.0.0+1"
   bloc:
     dependency: transitive
     description:
@@ -134,14 +120,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.6"
-  date_format:
-    dependency: transitive
-    description:
-      name: date_format
-      sha256: "8e5154ca363411847220c8cbc43afcf69c08e8debe40ba09d57710c25711760c"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.0.7"
   dbus:
     dependency: transitive
     description:

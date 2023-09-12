@@ -1,9 +1,10 @@
-import 'package:bc_user_module/view/login_page.dart';
-import 'package:bc_user_module/view/reset_pwd_page.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
+import 'package:flutter_module/pages/user/login_page.dart';
+import 'package:flutter_module/pages/user/reset_pwd_page.dart';
 import '../pages/app_root_page.dart';
 import '../pages/search_page.dart';
 

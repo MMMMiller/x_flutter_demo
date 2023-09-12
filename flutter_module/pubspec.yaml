@@ -22,11 +22,6 @@ dependencies:
   common_lib:
     path: module/biz-commonlib
 
-  bc_user_module:
-    path: module/bc_user_module
-  bc_user_api:
-    path: module/bc_user_api
-
   flutter_localizations:
     sdk: flutter
 dev_dependencies:

@@ -1,5 +1,4 @@
 
-import 'package:bc_user_module/common/api.dart';
 import 'package:common_lib/index.dart';
 import 'package:common_lib/service/list_refresh/index.dart';
 import 'package:flutter_module/domain/model/cms_entity.dart';
