@@ -10,15 +10,28 @@
         <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
-            <option value="$USER_HOME$/.pub-cache/git/flutter_boost-fe438a61ffd6df6af51226b5a48bb9f533b7a1bc/android" />
+            <option value="$USER_HOME$/.pub-cache/git/flutter_boost-d8fd7454b775d91710e30166a62e4810b1695fcf/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/connectivity_plus-3.0.6/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/device_info_plus-9.0.3/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-2.0.16/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_gallery_saver-2.0.3/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker_android-0.8.7+5/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/package_info_plus-4.1.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/path_provider_android-2.2.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/permission_handler_android-10.3.6/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences_android-2.2.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sqflite-2.3.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/url_launcher_android-6.1.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/video_player_android-2.4.10/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/webview_flutter_android-2.10.4/android" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/../flutter_module" />
             <option value="$PROJECT_DIR$/../flutter_module/.android/Flutter" />
+            <option value="$PROJECT_DIR$/../flutter_module/module/bc_upgrade/android" />
           </set>
         </option>
       </GradleProjectSettings>
     </option>
-    <option name="offlineMode" value="true" />
   </component>
 </project>

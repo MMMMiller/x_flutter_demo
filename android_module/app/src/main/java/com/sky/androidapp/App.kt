@@ -1,8 +1,10 @@
 package com.sky.androidapp
 
 import android.app.Application
+import android.content.Context
 import android.content.Intent
 import android.util.Log
+import androidx.multidex.MultiDex
 import com.idlefish.flutterboost.FlutterBoost
 import com.idlefish.flutterboost.FlutterBoostDelegate
 import com.idlefish.flutterboost.FlutterBoostRouteOptions
@@ -43,5 +45,10 @@ class App : Application() {
                 FlutterBoost.instance().currentActivity().startActivity(intent)
             }
         }) { println("start flutter engine") }
+    }
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        MultiDex.install(base)
     }
 }
