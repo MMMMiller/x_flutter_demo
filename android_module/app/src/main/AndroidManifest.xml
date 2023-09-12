@@ -27,11 +27,11 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.AppCompat"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
 
         <meta-data
             android:name="flutterEmbedding"
-            android:value="2"></meta-data>
+            android:value="2" />
     </application>
 
 </manifest>
