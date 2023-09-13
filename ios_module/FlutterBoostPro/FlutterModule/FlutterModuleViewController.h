@@ -10,7 +10,7 @@
 
 
 #import <flutter_boost/FBFlutterViewContainer.h>
-#import <UINavigationController+FDFullscreenPopGesture.h>
+//#import <UINavigationController+FDFullscreenPopGesture.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

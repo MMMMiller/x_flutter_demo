@@ -56,13 +56,13 @@
 
 
 - (void)pushSearchPage {
-    [FlutterModuleNavigator push:@"main/search_page" arguments:@{@"index":@(22222)}];
+    [FlutterModuleNavigator push:@"main/cms_page" arguments:@{@"index":@(22222)}];
     
 }
 
 - (void)closePage {
     [self.navigationController popToRootViewControllerAnimated:YES];
-    [FlutterModuleNavigator close:@"main/search_page"];
+    [FlutterModuleNavigator close:@"main/cms_page"];
 }
 
 @end

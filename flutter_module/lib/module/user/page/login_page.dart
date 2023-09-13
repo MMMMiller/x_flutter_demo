@@ -188,7 +188,7 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
         const Spacer(),
         CommonClickWidget(
           singleClick: () {
-            BoostNavigator.instance.push('user/reset_pwd_page',withContainer: false);
+            BoostNavigator.instance.push('user/reset_pwd_page',withContainer: true);
           },
           // RouterUtil.instance.build(BcRouteName.resetPwdPage).navigate(),
           child: CommonText(

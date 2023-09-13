@@ -1,18 +1,14 @@
 PODS:
   - AppleDevices (1.0.1)
-  - bc_upgrade (0.0.1):
-    - Flutter
   - connectivity_plus (0.0.1):
     - Flutter
     - ReachabilitySwift
   - device_info_plus (0.0.1):
     - Flutter
-  - FDFullscreenPopGesture (1.1)
   - Flutter (1.0.0)
   - flutter_boost (0.0.2):
     - Flutter
   - FlutterPluginRegistrant (0.0.1):
-    - bc_upgrade
     - connectivity_plus
     - device_info_plus
     - Flutter
@@ -59,10 +55,8 @@ PODS:
 
 DEPENDENCIES:
   - AppleDevices
-  - bc_upgrade (from `../flutter_module/.ios/.symlinks/plugins/bc_upgrade/ios`)
   - connectivity_plus (from `../flutter_module/.ios/.symlinks/plugins/connectivity_plus/ios`)
   - device_info_plus (from `../flutter_module/.ios/.symlinks/plugins/device_info_plus/ios`)
-  - FDFullscreenPopGesture
   - Flutter (from `../flutter_module/.ios/Flutter`)
   - flutter_boost (from `../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios`)
   - FlutterPluginRegistrant (from `../flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
@@ -82,15 +76,12 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AppleDevices
-    - FDFullscreenPopGesture
     - FMDB
     - JKRetractableGCDDelay
     - Masonry
     - ReachabilitySwift
 
 EXTERNAL SOURCES:
-  bc_upgrade:
-    :path: "../flutter_module/.ios/.symlinks/plugins/bc_upgrade/ios"
   connectivity_plus:
     :path: "../flutter_module/.ios/.symlinks/plugins/connectivity_plus/ios"
   device_info_plus:
@@ -124,13 +115,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AppleDevices: 70a7a616306468135637ecc0404f41e95b32ec1d
-  bc_upgrade: c9720230703c0a1d52a1ecb2a89d97ed4b3dbd07
   connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
   device_info_plus: 7545d84d8d1b896cb16a4ff98c19f07ec4b298ea
-  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_boost: 3e8a6e28c86d24c83be5b2fab067746dc77a1ad6
-  FlutterPluginRegistrant: 44fd885bfa4acce443a5a24ed752ba3a75e589bb
+  FlutterPluginRegistrant: c0d2f5484fa861beb3fb996520b2981c113b3e2f
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   image_gallery_saver: 259eab68fb271cfd57d599904f7acdc7832e7ef2
   image_picker_ios: 4a8aadfbb6dc30ad5141a2ce3832af9214a705b5
@@ -146,6 +135,6 @@ SPEC CHECKSUMS:
   video_player_avfoundation: 81e49bb3d9fb63dccf9fa0f6d877dc3ddbeac126
   webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
 
-PODFILE CHECKSUM: 59ada1342731d8f4a3fa21f438af9a5b14ac2073
+PODFILE CHECKSUM: 2b5a4f3d5343a10e76346c763c35ac8c58b298fd
 
 COCOAPODS: 1.12.1

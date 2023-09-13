@@ -25,7 +25,7 @@ class AppRouter {
     },
 
 
-    'main/search_page': (settings, uniqueId) {
+    'main/cms_page': (settings, uniqueId) {
       return CupertinoPageRoute(
         settings: settings,
         builder: (_) => CMSPage(),

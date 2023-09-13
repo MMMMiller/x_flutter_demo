@@ -8,7 +8,7 @@
 #import "FlutterModuleViewController.h"
 
 
-@interface FlutterModuleViewController ()
+@interface FlutterModuleViewController ()<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary * params;
 
@@ -36,19 +36,34 @@
     _flutterContainer = [[FBFlutterViewContainer alloc] init];
 }
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    return YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear: animated];
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /// 隐藏系统自带的导航栏，由Flutter侧实现
-    self.fd_prefersNavigationBarHidden = true;
-    
-    /// FDFullscreenPopGesture的全屏侧滑手势优先于Flutter页面的手势
-    /// 如果Flutter页面是类似PageView的结构，就会导致Flutter页面的右向滑动失效，并触发FDFullscreenPopGesture的侧滑返回
-    if (self.params[kDisableFullscreenPopGesture]) {
-        self.fd_interactivePopDisabled = [self.params[kDisableFullscreenPopGesture] boolValue];
-        [self.params removeObjectForKey:kDisableFullscreenPopGesture];
-    }
-    
+//    /// 隐藏系统自带的导航栏，由Flutter侧实现
+//    self.fd_prefersNavigationBarHidden = true;
+//
+//    /// FDFullscreenPopGesture的全屏侧滑手势优先于Flutter页面的手势
+//    /// 如果Flutter页面是类似PageView的结构，就会导致Flutter页面的右向滑动失效，并触发FDFullscreenPopGesture的侧滑返回
+//    if (self.params[kDisableFullscreenPopGesture]) {
+//        self.fd_interactivePopDisabled = [self.params[kDisableFullscreenPopGesture] boolValue];
+//        [self.params removeObjectForKey:kDisableFullscreenPopGesture];
+//    }
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     /// 供子类重写 调用 `setName:(NSString *)name params:(NSDictionary *)params;`
     [self willMountFlutterContainer];
     

@@ -21,6 +21,12 @@
     [super viewDidLoad];
     self.navigationItem.title = @"原生页面";
     
+    var sendMsgButton = [UIButton jk_buttonWithFrame:CGRectMake(0, 540, 150, 40) titleColor:UIColor.whiteColor title:@"发消息给Flutter"];
+    sendMsgButton.x_font(PingFangMediumFont(15)).jk_backgroundColor(UIColor.purpleColor).jk_cornrRadius(4);
+    [self.view addSubview:sendMsgButton];
+    sendMsgButton.jk_centerX = self.view.jk_centerX;
+    [sendMsgButton addTarget:self action:@selector(sendMsg) forControlEvents:(UIControlEventTouchUpInside)];
+    
     var flutterPresentButton = [UIButton jk_buttonWithFrame:CGRectMake(0, 460, 150, 40) titleColor:UIColor.whiteColor title:@"跳Flutter【Present】"];
     flutterPresentButton.x_font(PingFangMediumFont(15)).jk_backgroundColor(UIColor.purpleColor).jk_cornrRadius(4);
     [self.view addSubview:flutterPresentButton];
@@ -45,7 +51,7 @@
 
 - (void)presentSearchPage {
     self.index ++;
-    [FlutterModuleNavigator present:@"main/search_page" arguments:@{@"index":@(self.index)}];
+    [FlutterModuleNavigator present:@"main/cms_page" arguments:@{@"index":@(self.index)}];
 }
 
 - (void)pushSearchPage {
@@ -74,6 +80,9 @@
     [FlutterModuleAgent.shared preloadFlutterModuleAfterDelay:0.5];
 }
 
+- (void)sendMsg {
+    [FlutterModuleChannel.global.channel invokeMethod:@"msg_from_navtive" arguments:@{@"user_info":@"hahhahah"}];
+}
 
 
 @end

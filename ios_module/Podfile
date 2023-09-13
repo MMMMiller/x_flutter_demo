@@ -6,7 +6,7 @@ target 'FlutterBoostPro' do
     use_frameworks!
   
   pod 'AppleDevices'
-  pod 'FDFullscreenPopGesture'
+#  pod 'FDFullscreenPopGesture'
   pod 'JKRetractableGCDDelay'
   pod 'Masonry'
   

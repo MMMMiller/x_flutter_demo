@@ -54,7 +54,7 @@
 
 
 - (void)pushSearchPage {
-    [FlutterModuleNavigator push:@"main/search_page" arguments:@{@"index":@(22222)}];
+    [FlutterModuleNavigator push:@"main/cms_page" arguments:@{@"index":@(22222)}];
     
 }
 
