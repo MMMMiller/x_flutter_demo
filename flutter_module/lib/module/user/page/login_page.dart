@@ -1,13 +1,8 @@
-
-import 'package:common_lib/components/index.dart';
-import 'package:common_lib/index.dart';
-import 'package:extended_text/extended_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_module/module/user/domain/bloc/login/login_bloc.dart';
 import 'package:flutter_module/module/user/domain/bloc/user_info/user_center_bloc.dart';
-import 'package:flutter_module/module/user/widget/my_special_text_span_builder.dart';
-
+import 'package:todo_flutter/todo_flutter.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -17,26 +12,26 @@ class LoginPage extends StatefulWidget {
 }
 
 class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
-  LoginBloc get loginBloc => getBc<LoginBloc>();
+  LoginBloc get loginBloc => getBloc<LoginBloc>();
 
   @override
   void initState() {
     super.initState();
-    injectBloc(LoginBloc(this));
+    addBloc(LoginBloc()..setState(this));
     WidgetsBinding.instance.addObserver(this);
   }
 
-  @override
-  void onResume() {
-    super.onResume();
-    if (loginBloc.accountController.text.isNotEmpty) {
-      loginBloc.accountCheck();
-    }
-
-    if (loginBloc.psdController.text.isNotEmpty) {
-      loginBloc.pwdCheck();
-    }
-  }
+  // @override
+  // void onResume() {
+  //   super.onResume();
+  //   if (loginBloc.accountController.text.isNotEmpty) {
+  //     loginBloc.accountCheck();
+  //   }
+  //
+  //   if (loginBloc.psdController.text.isNotEmpty) {
+  //     loginBloc.pwdCheck();
+  //   }
+  // }
 
   @override
   void didChangeMetrics() {
@@ -56,9 +51,8 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
     return Scaffold(
       body: SafeArea(
         child: UnFocusWidget(
-          nodes: [loginBloc.accountNode, loginBloc.psdNode],
           child: Padding(
-            padding: symmetric(0, 16),
+            padding: symmetric(vertical: 0, horizontal: 16),
             child: Column(
               children: [
                 Expanded(
@@ -68,74 +62,74 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          sizeBox(height: 100),
+                          sizedBox(height: 100),
                           // CommonImage(
                           //   asset: BcImagePath.logo,
                           //   width: 48,
                           //   height: 48,
                           // ),
-                          sizeBox(height: 48),
+                          sizedBox(height: 48),
                           Form(
                             key: loginBloc.accountFormKey,
                             onChanged: () => loginBloc.accountCheck(),
                             child: SizedBox(
                               height: 64,
-                              child: BcInputLayoutWidget(
-                                controller: loginBloc.accountController,
-                                focusNode: loginBloc.accountNode,
-                                hint: '请输入用户名或手机号',
-                                maxLength: 32,
-                                showClear: true,
-                                prefix:
-                                    const Icon(CommonIcon.icMobile, size: 16),
-                              ),
+                              // child: BcInputLayoutWidget(
+                              //   controller: loginBloc.accountController,
+                              //   focusNode: loginBloc.accountNode,
+                              //   hint: '请输入用户名或手机号',
+                              //   maxLength: 32,
+                              //   showClear: true,
+                              //   // prefix:
+                              //   //     const Icon(CommonIcon.icMobile, size: 16),
+                              // ),
                             ),
                           ),
-                          sizeBox(height: 8),
+                          sizedBox(height: 8),
                           Form(
                             key: loginBloc.pwdFormKey,
                             onChanged: () => loginBloc.pwdCheck(),
                             child: SizedBox(
                               height: 64,
-                              child: BcInputLayoutWidget(
-                                controller: loginBloc.psdController,
-                                focusNode: loginBloc.psdNode,
-                                obscureText: true,
-                                maxLength: 16,
-                                hint: '请输入登录密码',
-                                validator: (text) {
-                                  if (text == null || text.isEmpty) {
-                                    return '请输入登录密码';
-                                  }
-                                  return null;
-                                },
-                                prefix: const Icon(CommonIcon.icLock, size: 16),
-                              ),
+                              // child: BcInputLayoutWidget(
+                              //   controller: loginBloc.psdController,
+                              //   focusNode: loginBloc.psdNode,
+                              //   obscureText: true,
+                              //   maxLength: 16,
+                              //   hint: '请输入登录密码',
+                              //   validator: (text) {
+                              //     if (text == null || text.isEmpty) {
+                              //       return '请输入登录密码';
+                              //     }
+                              //     return null;
+                              //   },
+                              //   // prefix: const Icon(CommonIcon.icLock, size: 16),
+                              // ),
                             ),
                           ),
-                          sizeBox(height: 8),
+                          sizedBox(height: 8),
                           _renderResetPwdButton(),
-                          sizeBox(height: 8),
-                          DataChangeWidget(
-                            dataChangeBloc: loginBloc.loginBtnValidBloc,
-                            child: (BuildContext context,
-                                DataChangeState btnState) {
+                          sizedBox(height: 8),
+                          DataChangeWidget<bool>(
+                            bloc: loginBloc.loginBtnValidBloc,
+                            child: (context, btnState) {
                               return CommonButton(
                                 '登录',
                                 fontSize: 14,
-                                disable: !btnState.data,
+                                disable: !btnState!,
                                 radius: 4,
-                                color: ThemeUtil.getPrimaryColor(context),
+                                // color: ThemeUtil.getPrimaryColor(context),
                                 margin: const EdgeInsets.only(top: 16),
                                 onPressed: () {
-                                  BoostNavigator.instance
-                                      .push("SearchResultPage", arguments: {"a": "a", "b": "a"});
+                                  BoostNavigator.instance.push(
+                                      "SearchResultPage",
+                                      arguments: {"a": "a", "b": "a"});
                                   // loginBloc.login();
                                 },
                               );
                             },
                           ),
-                          sizeBox(height: 6),
+                          sizedBox(height: 6),
                           _renderOtherMenu(),
                         ],
                       ),
@@ -152,11 +146,11 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
                     //         .navigate());
                   },
                   child: DataChangeWidget<bool>(
-                    dataChangeBloc: loginBloc.deviceIdBloc,
+                    bloc: loginBloc.deviceIdBloc,
                     child: (_, uiState) {
                       return CommonText(
                         '设备ID：djfkwefwelkfnjwke',
-                        color: ThemeUtil.getDesColor(context),
+                        // color: ThemeUtil.getDesColor(context),
                       );
                       //   BcDeviceInfoBuilder(
                       //   blocDeviceInfoBuild: (BcDeviceServiceState state) {
@@ -188,13 +182,14 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
         const Spacer(),
         CommonClickWidget(
           singleClick: () {
-            BoostNavigator.instance.push('user/reset_pwd_page',withContainer: true);
+            BoostNavigator.instance
+                .push('user/reset_pwd_page', withContainer: true);
           },
           // RouterUtil.instance.build(BcRouteName.resetPwdPage).navigate(),
           child: CommonText(
             '忘记密码',
             fontSize: 14,
-            color: ThemeUtil.getPrimaryColor(context),
+            // color: ThemeUtil.getPrimaryColor(context),
           ),
         ),
       ],
@@ -203,42 +198,42 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
 
   Widget _renderOtherMenu() {
     return DataChangeWidget(
-      dataChangeBloc: UserCenterBloc.instance.agreementBloc,
-      child: (BuildContext context, DataChangeState agreementState) {
+      bloc: UserCenterBloc.instance.agreementBloc,
+      child: (context, agreementState) {
         return Row(
           children: [
-            BcCheckBox(
-              isRound: true,
-              isChecked: false,
-              themeColor: ColorsConfig.ffff5e42,
-              onChange: (checked) => {
-                loginBloc.clickedCheckBox(),
-              },
-            ),
+            // BcCheckBox(
+            //   isRound: true,
+            //   isChecked: false,
+            //   themeColor: ColorsConfig.ffff5e42,
+            //   onChange: (checked) => {
+            //     loginBloc.clickedCheckBox(),
+            //   },
+            // ),
             SizedBox(width: 8),
-            ExtendedText(
-              '我已阅读并同意\$《服务协议》\$和\$《隐私协议》\$',
-              textAlign: TextAlign.left,
-              style: const TextStyle(
-                fontSize: 12,
-                color: ColorsConfig.ff86909c,
-              ),
-              specialTextSpanBuilder: MySpecialTextSpanBuilder(),
-              onSpecialTextTap: (text) {
-                if (text.contains('服务协议')) {
-                  // toWebPage(
-                  //   link: agreementState
-                  //       .data.service.agreementUrl,
-                  //   title: '服务协议',
-                  // );
-                } else {
-                  // toWebPage(
-                  //     link: agreementState
-                  //         .data.privacy.agreementUrl,
-                  //     title: '隐私协议');
-                }
-              },
-            ),
+            // ExtendedText(
+            //   '我已阅读并同意\$《服务协议》\$和\$《隐私协议》\$',
+            //   textAlign: TextAlign.left,
+            //   style: const TextStyle(
+            //     fontSize: 12,
+            //     color: ColorsConfig.ff86909c,
+            //   ),
+            //   specialTextSpanBuilder: MySpecialTextSpanBuilder(),
+            //   onSpecialTextTap: (text) {
+            //     if (text.contains('服务协议')) {
+            //       // toWebPage(
+            //       //   link: agreementState
+            //       //       .data.service.agreementUrl,
+            //       //   title: '服务协议',
+            //       // );
+            //     } else {
+            //       // toWebPage(
+            //       //     link: agreementState
+            //       //         .data.privacy.agreementUrl,
+            //       //     title: '隐私协议');
+            //     }
+            //   },
+            // ),
           ],
         );
       },

@@ -1,8 +1,7 @@
 part of 'user_center_bloc.dart';
 
-@immutable
 abstract class UserCenterEvent
-    extends XBaseEvent<UserCenterBloc, UserCenterState> {
+    extends BaseEvent<UserCenterBloc, UserCenterState> {
   UserCenterEvent();
 }
 
@@ -12,29 +11,24 @@ class RefreshUserInfoEvent extends UserCenterEvent {
     UserCenterBloc bloc,
     UserCenterState currentState,
   ) async* {
-    final baseNetEntity = await UserInfoRequest().load();
-    if (!isSuccess(baseNetEntity)) {
-      handlerException(bloc, baseNetEntity);
-    }
+    final baseNetEntity = await UserInfoRequest().request();
+    isSuccess(bloc, baseNetEntity);
     // deviceBloc.changeDeviceUser();
     yield UserCenterInitial(baseNetEntity.data);
+  }
+
+  @override
+  Future<UserCenterState> on(
+      UserCenterBloc bloc, UserCenterState currentState) async {
+    return currentState;
   }
 }
 
 class LoadLocalUserInfoEvent extends UserCenterEvent {
   @override
-  Stream<UserCenterState> applyAsync(
-    UserCenterBloc bloc,
-    UserCenterState currentState,
-  ) async* {
-    if (currentState.userInfoEntity == null) {
-      final userInfo = await UserInfoRequest().loadLocal();
-      if (userInfo != null) {
-        // deviceBloc.changeDeviceUser();
-        yield UserCenterInitial(userInfo);
-      }
-    } else {
-      yield currentState;
-    }
+  Future<UserCenterState> on(
+      UserCenterBloc bloc, UserCenterState currentState) async {
+    //TODO 重新实现一下
+    return currentState;
   }
 }

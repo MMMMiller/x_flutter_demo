@@ -4,14 +4,11 @@
 ///
 ///@author   xueml
 
-import 'package:common_lib/components/app_bar/bc_app_bar.dart';
-import 'package:common_lib/components/index.dart';
 import 'package:flutter/material.dart';
-import 'package:common_lib/index.dart';
 import 'package:flutter_boost/flutter_boost.dart';
+import 'package:flutter_module/common/util/colors_config.dart';
 import 'package:flutter_module/module/user/domain/bloc/password/password_manager_bloc.dart';
-import 'package:flutter_module/module/user/domain/bloc/user_info/user_center_bloc.dart';
-import 'package:flutter_module/module/user/widget/get_vcode_widget.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
 class ResetPwdPage extends StatefulWidget {
   const ResetPwdPage({super.key});
@@ -20,33 +17,43 @@ class ResetPwdPage extends StatefulWidget {
   ResetPwdPageState createState() => ResetPwdPageState();
 }
 
-class ResetPwdPageState extends BcPage<ResetPwdPage> {
+class ResetPwdPageState extends BaseState<ResetPwdPage> {
+  PasswordManagerBloc get bloc => getBloc<PasswordManagerBloc>();
+
   @override
   void initState() {
     super.initState();
-    injectBloc(PasswordManagerBloc(this)..init());
+    addBloc(PasswordManagerBloc()
+      ..setState(this)
+      ..init());
   }
 
   @override
-  void sendEventToView(ViewEvent event) {
-    if (event is ShowComfirmLoginDialogEvent) {
-      BcDialog.showNoCancelDialog(context,
-          title: '修改成功',
-          content: '密码已重置，请通过新密码登录',
-          confirmText: '返回登录',
-          onConfirm: () => {
-                UserCenterBloc.instance.cleanUserInfo(),
-            /// TODO
-                // RouterUtil.instance.popUntil(BcRouteName.loginPage),
-              });
-    }
-    super.sendEventToView(event);
+  void sendEventToView(String type, [data]) {
+    super.sendEventToView(type, data);
   }
 
+  // @override
+  // void sendEventToView(ViewEvent event) {
+  //   if (event is ShowComfirmLoginDialogEvent) {
+  //     BcDialog.showNoCancelDialog(context,
+  //         title: '修改成功',
+  //         content: '密码已重置，请通过新密码登录',
+  //         confirmText: '返回登录',
+  //         onConfirm: () => {
+  //               UserCenterBloc.instance.cleanUserInfo(),
+  //
+  //               /// TODO
+  //               // RouterUtil.instance.popUntil(BcRouteName.loginPage),
+  //             });
+  //   }
+  //   super.sendEventToView(event);
+  // }
+
   @override
-  Widget bcBuild(BuildContext context) {
+  Widget build(BuildContext context) {
     return Container(
-      padding: symmetric(24, 16),
+      padding: symmetric(vertical: 24, horizontal: 16),
       child: Column(
         children: [
           Form(
@@ -54,93 +61,93 @@ class ResetPwdPageState extends BcPage<ResetPwdPage> {
             onChanged: () => bloc.phoneCheck(),
             child: Container(
               height: 64,
-              child: BcInputLayoutWidget(
-                controller: bloc.phoneController,
-                hint: '请输入手机号码',
-                maxLength: 11,
-                showClear: true,
-                prefix: const Icon(CommonIcon.icMobile, size: 16),
-                validator: (text) {
-                  if (text == null || text.isEmpty) {
-                    return '请输入手机号码';
-                  }
-                  RegExp regex = new RegExp(r'^1([3456789])\d{9}$');
-                  if (!regex.hasMatch(text)) {
-                    return '请输入正确的手机号码';
-                  }
-                  return null;
-                },
-              ),
+              // child: BcInputLayoutWidget(
+              //   controller: bloc.phoneController,
+              //   hint: '请输入手机号码',
+              //   maxLength: 11,
+              //   showClear: true,
+              //   prefix: const Icon(CommonIcon.icMobile, size: 16),
+              //   validator: (text) {
+              //     if (text == null || text.isEmpty) {
+              //       return '请输入手机号码';
+              //     }
+              //     RegExp regex = new RegExp(r'^1([3456789])\d{9}$');
+              //     if (!regex.hasMatch(text)) {
+              //       return '请输入正确的手机号码';
+              //     }
+              //     return null;
+              //   },
+              // ),
             ),
           ),
-          sizeBox(height: 8),
+          sizedBox(height: 8),
           Form(
             key: bloc.vcCodeFormKey,
             onChanged: () => bloc.vcCodeCheck(),
             child: Container(
               height: 64,
-              child: BcInputLayoutWidget(
-                controller: bloc.codeController,
-                hint: '请输入验证码',
-                maxLength: 6,
-                prefix: const Icon(CommonIcon.icShake, size: 16),
-                suffix: VcodeWidget(
-                  bloc.vcodeBloc,
-                  getVcodeFunction: () {
-                    if (bloc.phoneFormKey.currentState!.validate()) {
-                      bloc.vcodeBloc
-                          .getForgetPsdVcode(bloc.phoneController.text);
-                    }
-                  },
-                ),
-              ),
+              // child: BcInputLayoutWidget(
+              //   controller: bloc.codeController,
+              //   hint: '请输入验证码',
+              //   maxLength: 6,
+              //   prefix: const Icon(CommonIcon.icShake, size: 16),
+              //   suffix: VcodeWidget(
+              //     bloc.vcodeBloc,
+              //     getVcodeFunction: () {
+              //       if (bloc.phoneFormKey.currentState!.validate()) {
+              //         bloc.vcodeBloc
+              //             .getForgetPsdVcode(bloc.phoneController.text);
+              //       }
+              //     },
+              //   ),
+              // ),
             ),
           ),
-          sizeBox(height: 8),
+          sizedBox(height: 8),
           Form(
             key: bloc.pwdFormKey,
             onChanged: () => bloc.pwdCheck(),
             child: Container(
               height: 64,
-              child: BcInputLayoutWidget(
-                obscureText: true,
-                maxLength: 16,
-                controller: bloc.passWordController,
-                hint: '密码由8-16位字母和数字组合',
-                prefix: const Icon(CommonIcon.icLock, size: 16),
-                validator: (text) {
-                  if (text == null || text.isEmpty) {
-                    return '请输入密码';
-                  }
-                  if (text.length < 8 || text.length > 16) {
-                    return '请输入8-16位字母和数字组合';
-                  }
-
-                  RegExp regex = RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{1,}$');
-                  if (!regex.hasMatch(text)) {
-                    return '请输入8-16位字母和数字组合';
-                  }
-                  print(text);
-                  return null;
-                },
-              ),
+              // child: BcInputLayoutWidget(
+              //   obscureText: true,
+              //   maxLength: 16,
+              //   controller: bloc.passWordController,
+              //   hint: '密码由8-16位字母和数字组合',
+              //   prefix: const Icon(CommonIcon.icLock, size: 16),
+              //   validator: (text) {
+              //     if (text == null || text.isEmpty) {
+              //       return '请输入密码';
+              //     }
+              //     if (text.length < 8 || text.length > 16) {
+              //       return '请输入8-16位字母和数字组合';
+              //     }
+              //
+              //     RegExp regex =
+              //         RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{1,}$');
+              //     if (!regex.hasMatch(text)) {
+              //       return '请输入8-16位字母和数字组合';
+              //     }
+              //     print(text);
+              //     return null;
+              //   },
+              // ),
             ),
           ),
-          sizeBox(height: 48),
-          DataChangeWidget(
-              dataChangeBloc: bloc.resetBtnValidBloc,
-              child: (BuildContext context, DataChangeState btnState) {
+          sizedBox(height: 48),
+          DataChangeWidget<bool>(
+              bloc: bloc.resetBtnValidBloc,
+              child: (context, btnState) {
                 return CommonButton(
                   '确定',
                   fontSize: 14,
-                  disable: !btnState.data,
-                  color: ThemeUtil.getPrimaryColor(context),
+                  disable: !btnState!,
+                  color: ColorsConfig.primaryColor,
                   radius: 4,
                   margin: const EdgeInsets.only(top: 16),
                   onPressed: () {
-
-                    BoostNavigator.instance
-                        .push("NativeViewController", arguments: {"a": "a", "b": "a"});
+                    BoostNavigator.instance.push("NativeViewController",
+                        arguments: {"a": "a", "b": "a"});
                     // bloc.resetPwd();
                   },
                 );
@@ -149,9 +156,4 @@ class ResetPwdPageState extends BcPage<ResetPwdPage> {
       ),
     );
   }
-
-  @override
-  PreferredSizeWidget? get bcAppBar => BcAppBar(title: '忘记密码');
-
-  PasswordManagerBloc get bloc => getBc<PasswordManagerBloc>();
 }

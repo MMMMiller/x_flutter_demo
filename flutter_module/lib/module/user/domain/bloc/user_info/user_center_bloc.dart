@@ -1,19 +1,18 @@
-
-import 'package:common_lib/index.dart';
+import 'package:flutter_module/common/service/event_extension.dart';
 import 'package:flutter_module/module/user/domain/request/user_sp.dart';
 import 'package:flutter_module/module/user/domain/model/agreement_info_entity.dart';
 import 'package:flutter_module/module/user/domain/model/employee_detail_entity.dart';
 import 'package:flutter_module/module/user/domain/request/user_info_request.dart';
-import 'package:flutter_module/module/user/main.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
 part 'user_center_event.dart';
+
 part 'user_center_state.dart';
 
-class UserCenterBloc extends BaseAppBloc<UserCenterEvent, UserCenterState> {
+class UserCenterBloc extends BaseBloc<UserCenterEvent, UserCenterState> {
   static UserCenterBloc get instance => _getInstance();
   static UserCenterBloc? _instance;
-  final DataChangeBloc<AgreementInfoEntity> agreementBloc =
-  DataChangeBloc(data: null);
+  final DataChangeBloc<AgreementInfoEntity> agreementBloc = DataChangeBloc(null);
 
   static UserCenterBloc _getInstance() {
     _instance ??= UserCenterBloc();
@@ -35,7 +34,7 @@ class UserCenterBloc extends BaseAppBloc<UserCenterEvent, UserCenterState> {
   void cleanUserInfo() {
     UserSp.removeToken();
     UserSp.removeUserId();
-    userModuleProvider.sendMsg(LoginOutModuleMessage());
+    // userModuleProvider.sendMsg(LoginOutModuleMessage());
   }
 
   void loadLocalUser() {

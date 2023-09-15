@@ -1,38 +1,36 @@
-
-import 'package:common_lib/index.dart';
+import 'package:flutter_module/common/api/api_provider.dart';
 import 'package:flutter_module/module/user/domain/request/user_api.dart';
-import 'package:flutter_module/module/user/domain/request/user_request.dart';
 import 'package:flutter_module/module/user/domain/model/login_info_entity.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
-class LoginRequest extends UserRequest<LoginInfoEntity> {
+class LoginRequest extends ApiRequest<LoginInfoEntity> {
   final String username;
   final String password;
 
-  LoginRequest(this.username, this.password);
+  LoginRequest(this.username, this.password)
+      : super(
+            {'username': username, 'password': password, 'terminalType': '4'});
 
   @override
-  RequestBean get requestBean => RequestBean(
-        Api.login,
-        params: {
-          'username': username,
-          'password': password,
-          'terminalType': '4'
-        },
-      );
-}
-class LogoutRequest extends UserRequest<LoginInfoEntity> {
+  RequestMethod get method => RequestMethod.get;
 
+  @override
+  String get url => Api.login;
+}
+
+class LogoutRequest extends ApiRequest<LoginInfoEntity> {
   final String equipmentId;
   final String token;
 
-  LogoutRequest(this.equipmentId, this.token);
+  LogoutRequest(this.equipmentId, this.token)
+      : super({
+          'equipmentId': equipmentId,
+          'token': token,
+        });
 
   @override
-  RequestBean get requestBean => RequestBean(
-    Api.logout,
-    params: {
-      'equipmentId': equipmentId,
-      'token':token,
-    },
-  );
+  RequestMethod get method => RequestMethod.get;
+
+  @override
+  String get url => Api.logout;
 }

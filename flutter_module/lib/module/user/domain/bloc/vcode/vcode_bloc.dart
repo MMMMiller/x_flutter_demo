@@ -1,18 +1,18 @@
-
-import 'package:common_lib/index.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_module/common/service/event_extension.dart';
 import 'package:flutter_module/module/user/domain/request/send_msg_request.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
 part 'vcode_event.dart';
 
 part 'vcode_state.dart';
 
-class VcodeBloc extends BaseLoadBloc<VcodeEvent, VcodeState> {
-  final ValueChanged valueChanged;
+class VcodeBloc extends BaseBloc<VcodeEvent, VcodeState> {
+  final ValueChanged? valueChanged;
 
-  VcodeBloc(view,{required this.valueChanged}) : super(view, InitialVcodeState());
+  VcodeBloc({required this.valueChanged}) : super(InitialVcodeState());
 
-
-  final DataChangeBloc<bool> vCodeBtnValidBloc = DataChangeBloc(data: false);
+  final DataChangeBloc<bool> vCodeBtnValidBloc = DataChangeBloc(false);
 
   getForgetPsdVcode(String phone) {
     print('fgtpwd');

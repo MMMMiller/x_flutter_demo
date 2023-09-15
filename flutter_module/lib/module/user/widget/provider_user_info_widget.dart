@@ -1,7 +1,6 @@
-
-import 'package:common_lib/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_module/module/user/domain/bloc/user_info/user_center_bloc.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
 ///文件名:    provider_user_info_widget
 ///创建时间:  2022/9/16 on 14:06

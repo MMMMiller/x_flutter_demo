@@ -1,7 +1,7 @@
-
-import 'package:common_lib/index.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_module/common/util/colors_config.dart';
 import 'package:flutter_module/module/user/domain/bloc/vcode/vcode_bloc.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
 class VcodeWidget extends BaseStatelessWidget {
   final VcodeBloc vcodeBloc;
@@ -24,15 +24,17 @@ class VcodeWidget extends BaseStatelessWidget {
             vcodeBloc: vcodeBloc,
           );
         }
-        return DataChangeWidget(
-            dataChangeBloc: this.vcodeBloc.vCodeBtnValidBloc,
-            child: (BuildContext context, DataChangeState btnState) {
+        return DataChangeWidget<bool>(
+            bloc: this.vcodeBloc.vCodeBtnValidBloc,
+            child: (context, btnState) {
               return CommonClickWidget(
                 child: CommonText(
-                  state is UnVcodeState ? '重新获取':'获取验证码',
+                  state is UnVcodeState ? '重新获取' : '获取验证码',
                   fontSize: 13,
                   fontWeight: FontWeight.w400,
-                  color: btnState.data ? ColorsConfig.primaryColor : ColorsConfig.c8c8c8,
+                  color: btnState!
+                      ? ColorsConfig.primaryColor
+                      : ColorsConfig.ffc8c8c8,
                 ),
                 singleClick: () {
                   print('点击点击');
@@ -86,13 +88,13 @@ class _SmsCountDownState extends State<SmsCountDown>
 
 class AnimatedCountdown extends AnimatedWidget {
   final Animation<int> animation;
-  final VoidCallback callback;
+  final VoidCallback? callback;
 
   AnimatedCountdown({required this.callback, key, required this.animation})
       : super(key: key, listenable: animation) {
     this.animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        if (callback != null) callback();
+        if (callback != null) callback!();
       }
     });
   }
@@ -102,7 +104,7 @@ class AnimatedCountdown extends AnimatedWidget {
     return CommonText(
       '重新获取${animation.value}秒',
       fontSize: 13,
-      color: ColorsConfig.c8c8c8,
+      color: ColorsConfig.ffc8c8c8,
       // S.of(context).splashSkip,
     );
   }

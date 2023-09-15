@@ -1,4 +1,4 @@
-import 'package:common_lib/index.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
 /// createTime: 2022/9/28 on 11:23
 /// desc:
@@ -6,26 +6,26 @@ import 'package:common_lib/index.dart';
 /// @author azhon
 class AppSp {
   static void setProxy(bool proxy) {
-    SharedPreferencesUtil.putBool('isProxy', proxy);
+    PreferencesUtil.putBool('isProxy', proxy);
   }
 
   static bool isProxy() {
-    return SharedPreferencesUtil.getBool('isProxy') ?? false;
+    return PreferencesUtil.getBool('isProxy');
   }
 
   static void setProxyIp(String ip) {
-    SharedPreferencesUtil.putString('proxyIp', ip);
+    PreferencesUtil.putString('proxyIp', ip);
   }
 
   static String getProxyIp() {
-    return SharedPreferencesUtil.getString('proxyIp') ?? '';
+    return PreferencesUtil.getString('proxyIp');
   }
 
   static void setEnv(String env) {
-    SharedPreferencesUtil.putString('env', env);
+    PreferencesUtil.putString('env', env);
   }
 
   static String getEnv() {
-    return SharedPreferencesUtil.getString('env') ?? '';
+    return PreferencesUtil.getString('env');
   }
 }

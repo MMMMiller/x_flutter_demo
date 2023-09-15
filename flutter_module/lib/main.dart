@@ -1,28 +1,67 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:common_lib/index.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
-import 'package:flutter_module/framework/service/application_service.dart';
+import 'package:flutter_module/common/util/colors_config.dart';
+import 'package:flutter_module/routes/routes.dart';
+import 'package:todo_flutter/todo_app.dart';
+import 'package:todo_flutter/todo_flutter.dart';
 
-import 'flutter_app.dart';
 import 'common/util/native_messenger.dart';
 
 void main() {
   runZonedGuarded(() async {
     Env.env = Env.release;
     CustomFlutterBinding();
+
     ///添加全局生命周期监听类
     PageVisibilityBinding.instance.addGlobalObserver(AppLifecycleObserver());
     WidgetsFlutterBinding.ensureInitialized();
-    await SharedPreferencesUtil.getInstance();
-    await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]);
+    await PreferencesUtil.init();
+    await SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    // return FlutterBoostApp(AppRouter.routeFactory, initialRoute: '/',
+    //     appBuilder: (Widget home) {
+    //       return home;
+    //     });
 
-    ApplicationService.instance.init();
-
-    runApp(FlutterApp());
+    runApp(
+      RefreshConfiguration(
+        hideFooterWhenNotFull: true,
+        headerBuilder: () => const MaterialClassicHeader(),
+        footerBuilder: () => ClassicFooter(
+          canLoadingText: '松手以加载更多',
+          failedText: '加载失败，请点击重试',
+          idleText: '上拉加载更多',
+          loadingText: '加载中...',
+          noDataText: '暂无更多数据',
+          textStyle: TextStyle(
+            color: ColorsConfig.ffcccccc,
+            fontSize: 12,
+          ),
+        ),
+        child: FlutterBoostApp(
+          AppRouter.routeFactory,
+          initialRoute: '/',
+          appBuilder: (Widget home) {
+            return TodoApp(
+              designSize: const Size(375, 812),
+              home: home,
+              theme: ThemeData(
+                brightness: Brightness.light,
+                scaffoldBackgroundColor: Color(0xFFFFFFFF), //Color(0xFFFFFFFF),
+              ),
+              darkTheme: ThemeData(
+                brightness: Brightness.dark,
+                scaffoldBackgroundColor: Color(0xFF000000),
+              ),
+            );
+          },
+        ),
+      ),
+    );
 
     /// App.native通信员初始化
     NativeMessenger.shared();
@@ -79,7 +118,8 @@ class AppLifecycleObserver with GlobalPageVisibilityObserver {
 }
 
 ///创建一个自定义的Binding，继承和with的关系如下，里面什么都不用写
-class CustomFlutterBinding extends WidgetsFlutterBinding with BoostFlutterBinding {}
+class CustomFlutterBinding extends WidgetsFlutterBinding
+    with BoostFlutterBinding {}
 
 /// 状态栏
 configureSystemUIOverlayStyle() {
