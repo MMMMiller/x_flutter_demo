@@ -6,6 +6,7 @@
 import 'package:flutter_thrio/flutter_thrio.dart';
 
 import 'biz/module.dart' as biz;
+import 'user/module.dart' as user;
 
 class Module
     with
@@ -17,6 +18,7 @@ class Module
   void onModuleRegister(final ModuleContext moduleContext) {
     navigatorLogEnabled = true;
     registerModule(biz.Module(), moduleContext);
+    registerModule(user.Module(), moduleContext);
   }
 
   @override

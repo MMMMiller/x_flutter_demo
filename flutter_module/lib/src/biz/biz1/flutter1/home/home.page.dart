@@ -8,6 +8,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_module/src/user/route.dart';
 import 'package:flutter_thrio/flutter_thrio.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -191,6 +192,21 @@ class _HomePageState extends State<HomePage>
                               color: Colors.yellow,
                               child: const Text(
                                 'push flutter1',
+                                style: TextStyle(
+                                    fontSize: 22, color: Colors.black),
+                              )),
+                        ),
+
+                        InkWell(
+                          onTap: () async {
+                            final params = await user.about_us.push();
+                          },
+                          child: Container(
+                              padding: const EdgeInsets.all(8),
+                              margin: const EdgeInsets.all(8),
+                              color: Colors.yellow,
+                              child: const Text(
+                                'push user/about_us',
                                 style: TextStyle(
                                     fontSize: 22, color: Colors.black),
                               )),

@@ -48,7 +48,7 @@ class _MainAppState extends State<MainApp> {
 void main() => runWith();
 void biz1() => runWith(entrypoint:'biz1');
 void biz2() => runWith(entrypoint:'biz2');
-
+void user() => runWith(entrypoint:'user');
 
 runWith({String? entrypoint}) async {
   Env.env = Env.release;
