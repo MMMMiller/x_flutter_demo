@@ -1,6 +1,8 @@
 import 'dart:async';
+
 import 'package:flutter_thrio/flutter_thrio.dart';
-import './app.dart' as app;
+
+import 'src/app.dart' as app;
 
 Future<void> main() async {
   ThrioLogger.v('main');

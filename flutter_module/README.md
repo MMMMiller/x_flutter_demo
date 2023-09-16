@@ -1,11 +1,16 @@
-# flutter_module
+# flutter_thrio_example
 
-A new flutter module project.
+Demonstrates how to use the flutter_thrio plugin.
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.dev/).
+This project is a starting point for a Flutter application.
 
-For instructions integrating Flutter modules to your existing applications,
-see the [add-to-app documentation](https://flutter.dev/docs/development/add-to-app).
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
