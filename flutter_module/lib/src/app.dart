@@ -9,6 +9,12 @@ import 'package:todo_flutter/todo_flutter.dart';
 
 import 'module.dart';
 
+void main() => runWith();
+void biz1() => runWith(entrypoint:'biz1');
+void biz2() => runWith(entrypoint:'biz2');
+void user() => runWith(entrypoint:'user');
+
+
 class MainApp extends StatefulWidget {
   const MainApp({super.key, final String entrypoint = 'main'})
       : _entrypoint = entrypoint;
@@ -45,11 +51,6 @@ class _MainAppState extends State<MainApp> {
 }
 
 
-void main() => runWith();
-void biz1() => runWith(entrypoint:'biz1');
-void biz2() => runWith(entrypoint:'biz2');
-void user() => runWith(entrypoint:'user');
-
 runWith({String? entrypoint}) async {
   Env.env = Env.release;
 
@@ -58,7 +59,7 @@ runWith({String? entrypoint}) async {
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
   );
-  Widget _mainApp = entrypoint == null ? MainApp() : MainApp(entrypoint: entrypoint);
+  Widget _mainApp = entrypoint == null ? const MainApp() : MainApp(entrypoint: entrypoint);
   runApp(RefreshConfiguration(
     hideFooterWhenNotFull: true,
     headerBuilder: () => const MaterialClassicHeader(),

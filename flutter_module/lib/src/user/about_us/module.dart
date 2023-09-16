@@ -4,7 +4,6 @@
 //
 
 import 'package:flutter_thrio/flutter_thrio.dart';
-
 import 'about_us.page.dart';
 
 class Module with ThrioModule, ModuleParamScheme, ModulePageBuilder {
@@ -20,7 +19,7 @@ class Module with ThrioModule, ModuleParamScheme, ModulePageBuilder {
 
   @override
   void onParamSchemeRegister(final ModuleContext moduleContext) {
-    registerParamScheme('stringKeyBiz1');
+    registerParamScheme('stringKeyAboutUs');
   }
 }
 

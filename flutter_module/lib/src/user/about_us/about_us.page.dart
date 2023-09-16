@@ -1,14 +1,12 @@
 /// createTime: 2023/9/16 on 18:27
-/// desc: 
-/// 
+/// desc:
+///
 /// @author xueml
-
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_module/common/widgets/yjy_page.dart';
-import 'package:flutter_module/config/service/native_messenger.dart';
 import 'package:flutter_module/config/util/colors_config.dart';
 import 'package:flutter_module/src/user/about_us/widget/download_app_dialog.dart';
 import 'package:flutter_module/src/user/about_us/widget/row_item.dart';
@@ -26,47 +24,53 @@ class AboutUsPage extends NavigatorStatefulPage {
   AboutUsPageState createState() => AboutUsPageState();
 }
 
-class AboutUsPageState extends YjyPage<AboutUsPage> {
+class AboutUsPageState extends BasePage<AboutUsPage>
+    with NavigatorPageLifecycleMixin {
   final DataChangeBloc<String> _appVersionBloc = DataChangeBloc('');
 
   @override
   String? get pageName => '关于驿小店';
 
   @override
-  Widget yjyBuild(BuildContext context) {
-    return Column(
+  Widget baseBuild(BuildContext context) => Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 160,
         ),
         Container(
           width: double.infinity,
           color: Colors.white,
-          child: Center(
-            child: Icon(Icons.abc,size: 100,),
+          child: const Center(
+            child: Icon(
+              Icons.abc,
+              size: 100,
+            ),
           ),
         ),
-        SizedBox(height: 24,),
-        CommonText(
+        const SizedBox(
+          height: 24,
+        ),
+        const CommonText(
           '驿小店',
           fontSize: 18,
           fontWeight: FontWeight.w600,
           color: Colors.black,
         ),
-        SizedBox(height: 12,),
+        const SizedBox(
+          height: 12,
+        ),
         DataChangeWidget(
           bloc: _appVersionBloc,
-          child: (context,String? state) {
-            var version = state;
+          child: (context, String? state) {
+            final version = state;
             return CommonText(
-              'Version' + (version != null ? version : ''),
+              'Version ${version != null ? version : ''}',
               fontSize: 13,
               fontWeight: FontWeight.w400,
               color: ColorsConfig.ff666666,
             );
           },
         ),
-
         renderRowItem(
           title: '检查更新',
           click: () {
@@ -87,12 +91,12 @@ class AboutUsPageState extends YjyPage<AboutUsPage> {
               onTap: () async {
                 // appUpdateBloc.checkUpdateAndLoading();
                 await Clipboard.setData(
-                  ClipboardData(text: 'imContent?.text?.content ?? ' ''),
+                  const ClipboardData(text: 'imContent?.text?.content ?? ' ''),
                 );
                 showToast('复制成功');
                 print('o bject');
               },
-              child: Icon(
+              child: const Icon(
                 Icons.copy,
                 color: ColorsConfig.ff666666,
                 size: 16,
@@ -103,7 +107,6 @@ class AboutUsPageState extends YjyPage<AboutUsPage> {
         ),
       ],
     );
-  }
 
   @override
   void initState() {
@@ -111,22 +114,31 @@ class AboutUsPageState extends YjyPage<AboutUsPage> {
     getCurrentVersion();
   }
 
+  @override
+  void didAppear(final RouteSettings settings) {
+    super.didAppear(settings);
+    print('哈哈哈哈\n about_us_page,Appear');
+  }
+
+  @override
+  void didDisappear(final RouteSettings settings) {
+    super.didDisappear(settings);
+    print('哈哈哈哈\n about_us_page,Disappear');
+  }
+
   getCurrentVersion() async {
-    String? version = await NativeMessenger.shared().getAppVersion();
-    _appVersionBloc.changeData(version);
+    // String? version = await NativeMessenger.shared().getAppVersion();
+    // _appVersionBloc.changeData(version);
   }
 
   void showDownloadAppDialog() {
-
     showDialog(
         barrierDismissible: true,
         context: context,
-        builder: (_) {
-          return DownloadAppDialog(
+        builder: (_) => DownloadAppDialog(
             onClose: () {
               Navigator.pop(context);
             },
-          );
-        });
+          ));
   }
 }

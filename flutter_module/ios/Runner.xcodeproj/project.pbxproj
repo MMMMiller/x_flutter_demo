@@ -22,6 +22,7 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		C67E12882AB5CB28008B7967 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E12872AB5CB28008B7967 /* NativeViewController.m */; };
 		DBF1779579C321B52260F045 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A818C15DEB1FB00486F7B4C /* libPods-Runner.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A1418EFA6BE6AD3296DB90C /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		B13733C34D89E1FAF010FE70 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		C67E12862AB5CB28008B7967 /* NativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
+		C67E12872AB5CB28008B7967 /* NativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 			children = (
 				7AFFD8ED1D35381100E5BB4D /* AppDelegate.h */,
 				7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */,
+				C67E12862AB5CB28008B7967 /* NativeViewController.h */,
+				C67E12872AB5CB28008B7967 /* NativeViewController.m */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				47414A0B2898ECB8008AFDC3 /* CustomFlutterViewController.h */,
 				47414A0E2898ECB8008AFDC3 /* CustomFlutterViewController.m */,
@@ -342,6 +347,7 @@
 				478AE5032898F9B100887E22 /* SampleModule.m in Sources */,
 				478AE5052898F9B100887E22 /* ThrioViewController.m in Sources */,
 				47414A222898ECB9008AFDC3 /* MainModule.m in Sources */,
+				C67E12882AB5CB28008B7967 /* NativeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,3 +24,10 @@ Future<void> biz2() async {
     Zone.current.handleUncaughtError(error, stack);
   });
 }
+
+@pragma('vm:entry-point')
+Future<void> user() async {
+  runZonedGuarded(app.user, (final error, final stack) {
+    Zone.current.handleUncaughtError(error, stack);
+  });
+}

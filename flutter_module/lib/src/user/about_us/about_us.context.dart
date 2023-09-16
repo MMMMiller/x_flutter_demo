@@ -5,7 +5,7 @@
 
 import 'package:flutter_thrio/flutter_thrio.dart';
 
-extension Biz1Context on ModuleContext {
+extension AboutUsContext on ModuleContext {
   /// get an int value.
   ///
   int get intValue =>
