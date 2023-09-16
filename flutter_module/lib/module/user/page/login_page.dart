@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boost/flutter_boost.dart';
+// import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_module/module/user/domain/bloc/login/login_bloc.dart';
 import 'package:flutter_module/module/user/domain/bloc/user_info/user_center_bloc.dart';
 import 'package:todo_flutter/todo_flutter.dart';
@@ -114,16 +114,16 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
                             bloc: loginBloc.loginBtnValidBloc,
                             child: (context, btnState) {
                               return CommonButton(
-                                '登录',
+                                '登录123',
                                 fontSize: 14,
                                 disable: !btnState!,
                                 radius: 4,
                                 // color: ThemeUtil.getPrimaryColor(context),
                                 margin: const EdgeInsets.only(top: 16),
                                 onPressed: () {
-                                  BoostNavigator.instance.push(
-                                      "SearchResultPage",
-                                      arguments: {"a": "a", "b": "a"});
+                                  // BoostNavigator.instance.push(
+                                  //     "SearchResultPage",
+                                  //     arguments: {"a": "a", "b": "a"});
                                   // loginBloc.login();
                                 },
                               );
@@ -182,8 +182,8 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
         const Spacer(),
         CommonClickWidget(
           singleClick: () {
-            BoostNavigator.instance
-                .push('user/reset_pwd_page', withContainer: true);
+            // BoostNavigator.instance
+            //     .push('user/reset_pwd_page', withContainer: true);
           },
           // RouterUtil.instance.build(BcRouteName.resetPwdPage).navigate(),
           child: CommonText(

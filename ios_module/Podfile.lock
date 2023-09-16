@@ -1,139 +1,84 @@
 PODS:
   - AppleDevices (1.0.1)
-  - connectivity_plus (0.0.1):
-    - Flutter
-    - ReachabilitySwift
-  - device_info_plus (0.0.1):
-    - Flutter
   - Flutter (1.0.0)
+  - flutter_app_update (0.0.1):
+    - Flutter
   - flutter_boost (0.0.2):
     - Flutter
+  - flutter_thrio (1.0.0):
+    - Flutter
   - FlutterPluginRegistrant (0.0.1):
-    - connectivity_plus
-    - device_info_plus
     - Flutter
+    - flutter_app_update
     - flutter_boost
-    - image_gallery_saver
-    - image_picker_ios
-    - package_info_plus
+    - flutter_thrio
+    - fluttertoast
     - path_provider_foundation
-    - permission_handler_apple
     - shared_preferences_foundation
-    - sqflite
-    - url_launcher_ios
-    - video_player_avfoundation
-    - webview_flutter_wkwebview
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
-  - image_gallery_saver (1.5.0):
+  - fluttertoast (0.0.2):
     - Flutter
-  - image_picker_ios (0.0.1):
-    - Flutter
+    - Toast
   - JKRetractableGCDDelay (1.0.2)
   - Masonry (1.1.0)
-  - package_info_plus (0.4.5):
-    - Flutter
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - permission_handler_apple (9.1.1):
-    - Flutter
-  - ReachabilitySwift (5.0.0)
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - sqflite (0.0.3):
-    - Flutter
-    - FMDB (>= 2.7.5)
-  - url_launcher_ios (0.0.1):
-    - Flutter
-  - video_player_avfoundation (0.0.1):
-    - Flutter
-  - webview_flutter_wkwebview (0.0.1):
-    - Flutter
+  - Toast (4.0.0)
 
 DEPENDENCIES:
   - AppleDevices
-  - connectivity_plus (from `../flutter_module/.ios/.symlinks/plugins/connectivity_plus/ios`)
-  - device_info_plus (from `../flutter_module/.ios/.symlinks/plugins/device_info_plus/ios`)
   - Flutter (from `../flutter_module/.ios/Flutter`)
+  - flutter_app_update (from `../flutter_module/.ios/.symlinks/plugins/flutter_app_update/ios`)
   - flutter_boost (from `../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios`)
+  - flutter_thrio (from `../flutter_module/.ios/.symlinks/plugins/flutter_thrio/ios`)
   - FlutterPluginRegistrant (from `../flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
-  - image_gallery_saver (from `../flutter_module/.ios/.symlinks/plugins/image_gallery_saver/ios`)
-  - image_picker_ios (from `../flutter_module/.ios/.symlinks/plugins/image_picker_ios/ios`)
+  - fluttertoast (from `../flutter_module/.ios/.symlinks/plugins/fluttertoast/ios`)
   - JKRetractableGCDDelay
   - Masonry
-  - package_info_plus (from `../flutter_module/.ios/.symlinks/plugins/package_info_plus/ios`)
   - path_provider_foundation (from `../flutter_module/.ios/.symlinks/plugins/path_provider_foundation/darwin`)
-  - permission_handler_apple (from `../flutter_module/.ios/.symlinks/plugins/permission_handler_apple/ios`)
   - shared_preferences_foundation (from `../flutter_module/.ios/.symlinks/plugins/shared_preferences_foundation/darwin`)
-  - sqflite (from `../flutter_module/.ios/.symlinks/plugins/sqflite/ios`)
-  - url_launcher_ios (from `../flutter_module/.ios/.symlinks/plugins/url_launcher_ios/ios`)
-  - video_player_avfoundation (from `../flutter_module/.ios/.symlinks/plugins/video_player_avfoundation/ios`)
-  - webview_flutter_wkwebview (from `../flutter_module/.ios/.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AppleDevices
-    - FMDB
     - JKRetractableGCDDelay
     - Masonry
-    - ReachabilitySwift
+    - Toast
 
 EXTERNAL SOURCES:
-  connectivity_plus:
-    :path: "../flutter_module/.ios/.symlinks/plugins/connectivity_plus/ios"
-  device_info_plus:
-    :path: "../flutter_module/.ios/.symlinks/plugins/device_info_plus/ios"
   Flutter:
     :path: "../flutter_module/.ios/Flutter"
+  flutter_app_update:
+    :path: "../flutter_module/.ios/.symlinks/plugins/flutter_app_update/ios"
   flutter_boost:
     :path: "../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios"
+  flutter_thrio:
+    :path: "../flutter_module/.ios/.symlinks/plugins/flutter_thrio/ios"
   FlutterPluginRegistrant:
     :path: "../flutter_module/.ios/Flutter/FlutterPluginRegistrant"
-  image_gallery_saver:
-    :path: "../flutter_module/.ios/.symlinks/plugins/image_gallery_saver/ios"
-  image_picker_ios:
-    :path: "../flutter_module/.ios/.symlinks/plugins/image_picker_ios/ios"
-  package_info_plus:
-    :path: "../flutter_module/.ios/.symlinks/plugins/package_info_plus/ios"
+  fluttertoast:
+    :path: "../flutter_module/.ios/.symlinks/plugins/fluttertoast/ios"
   path_provider_foundation:
     :path: "../flutter_module/.ios/.symlinks/plugins/path_provider_foundation/darwin"
-  permission_handler_apple:
-    :path: "../flutter_module/.ios/.symlinks/plugins/permission_handler_apple/ios"
   shared_preferences_foundation:
     :path: "../flutter_module/.ios/.symlinks/plugins/shared_preferences_foundation/darwin"
-  sqflite:
-    :path: "../flutter_module/.ios/.symlinks/plugins/sqflite/ios"
-  url_launcher_ios:
-    :path: "../flutter_module/.ios/.symlinks/plugins/url_launcher_ios/ios"
-  video_player_avfoundation:
-    :path: "../flutter_module/.ios/.symlinks/plugins/video_player_avfoundation/ios"
-  webview_flutter_wkwebview:
-    :path: "../flutter_module/.ios/.symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
   AppleDevices: 70a7a616306468135637ecc0404f41e95b32ec1d
-  connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
-  device_info_plus: 7545d84d8d1b896cb16a4ff98c19f07ec4b298ea
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_app_update: 65f61da626cb111d1b24674abc4b01728d7723bc
   flutter_boost: 3e8a6e28c86d24c83be5b2fab067746dc77a1ad6
-  FlutterPluginRegistrant: c0d2f5484fa861beb3fb996520b2981c113b3e2f
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  image_gallery_saver: 259eab68fb271cfd57d599904f7acdc7832e7ef2
-  image_picker_ios: 4a8aadfbb6dc30ad5141a2ce3832af9214a705b5
+  flutter_thrio: 104aef119f6e95238fda9aa17a7e7e59ed9eb40b
+  FlutterPluginRegistrant: 6233d77e40530baa1bc0cdf9e51f75f08b210189
+  fluttertoast: fafc4fa4d01a6a9e4f772ecd190ffa525e9e2d9c
   JKRetractableGCDDelay: 95f9c04a3a16725aa3375274e08549f6f7363ba1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  package_info_plus: fd030dabf36271f146f1f3beacd48f564b0f17f7
   path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
-  permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
-  sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
-  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
-  video_player_avfoundation: 81e49bb3d9fb63dccf9fa0f6d877dc3ddbeac126
-  webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
 PODFILE CHECKSUM: 2b5a4f3d5343a10e76346c763c35ac8c58b298fd
 

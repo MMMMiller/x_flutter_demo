@@ -5,7 +5,7 @@
 ///@author   xueml
 
 import 'package:flutter/material.dart';
-import 'package:flutter_boost/flutter_boost.dart';
+// import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_module/common/util/colors_config.dart';
 import 'package:flutter_module/module/user/domain/bloc/password/password_manager_bloc.dart';
 import 'package:todo_flutter/todo_flutter.dart';
@@ -146,8 +146,8 @@ class ResetPwdPageState extends BaseState<ResetPwdPage> {
                   radius: 4,
                   margin: const EdgeInsets.only(top: 16),
                   onPressed: () {
-                    BoostNavigator.instance.push("NativeViewController",
-                        arguments: {"a": "a", "b": "a"});
+                    // BoostNavigator.instance.push("NativeViewController",
+                    //     arguments: {"a": "a", "b": "a"});
                     // bloc.resetPwd();
                   },
                 );

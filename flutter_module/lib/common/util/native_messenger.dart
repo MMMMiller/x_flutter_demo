@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:flutter_boost/flutter_boost.dart';
+// // import 'package:flutter_boost/flutter_boost.dart';
 // import 'theme_mode_dispatcher.dart';
 
 class NativeMessenger {
@@ -15,6 +15,10 @@ class NativeMessenger {
 
   MethodChannel get channel => _methodChannel;
 
+  Future<String> getAppVersion() async {
+    return await _methodChannel.invokeMethod('get_app_version');
+  }
+
   /// 跟Native通信交互
   void _initMessageChannel() {
     _methodChannel.setMethodCallHandler((MethodCall call) {
@@ -28,7 +32,7 @@ class NativeMessenger {
         // ThemeModeDispatcher.shared()
         //     .handlePlatformBrightnessChanged(brightness);
       } else if (call.method == 'exit_current_page') {
-        BoostNavigator.instance.pop();
+        // BoostNavigator.instance.pop();
       }
       return Future<dynamic>.value();
     });
