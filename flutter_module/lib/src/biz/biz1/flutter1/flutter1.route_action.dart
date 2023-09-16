@@ -3,7 +3,7 @@
 
 import 'dart:async';
 
-import 'package:example/src/biz/types/people.dart';
+import 'package:flutter_module/src/biz/types/people.dart';
 import 'package:flutter_thrio/flutter_thrio.dart';
 
 /// get people
