@@ -10,11 +10,21 @@
 		119CB5ADA2401BFEB49C31CF /* Pods_FlutterBoostPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2744B535295168065992A4 /* Pods_FlutterBoostPro.framework */; };
 		4660F47A26B3AEF90007D2F5 /* Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4660F47926B3AEF90007D2F5 /* Info-Test.plist */; };
 		46D1768F2671AF9B00C959B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D1768E2671AF9B00C959B8 /* AppDelegate.m */; };
-		46D176952671AF9B00C959B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176942671AF9B00C959B8 /* ViewController.m */; };
 		46D176982671AF9B00C959B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D176962671AF9B00C959B8 /* Main.storyboard */; };
 		46D1769A2671AF9E00C959B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46D176992671AF9E00C959B8 /* Assets.xcassets */; };
 		46D1769D2671AF9E00C959B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D1769B2671AF9E00C959B8 /* LaunchScreen.storyboard */; };
 		46D176A02671AF9E00C959B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D1769F2671AF9E00C959B8 /* main.m */; };
+		C67E128B2AB6D495008B7967 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E128A2AB6D495008B7967 /* File.swift */; };
+		C67E12A22AB6D4AA008B7967 /* SwiftModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E128E2AB6D4AA008B7967 /* SwiftModule.swift */; };
+		C67E12A32AB6D4AA008B7967 /* Page5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E128F2AB6D4AA008B7967 /* Page5View.swift */; };
+		C67E12A42AB6D4AA008B7967 /* Module2.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E12912AB6D4AA008B7967 /* Module2.m */; };
+		C67E12A52AB6D4AA008B7967 /* ThrioViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E12942AB6D4AA008B7967 /* ThrioViewController2.m */; };
+		C67E12A62AB6D4AA008B7967 /* SampleModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E12962AB6D4AA008B7967 /* SampleModule.m */; };
+		C67E12A72AB6D4AA008B7967 /* Module1.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E12982AB6D4AA008B7967 /* Module1.m */; };
+		C67E12A82AB6D4AA008B7967 /* ThrioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E12992AB6D4AA008B7967 /* ThrioViewController.m */; };
+		C67E12A92AB6D4AA008B7967 /* MainModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E129D2AB6D4AA008B7967 /* MainModule.m */; };
+		C67E12AA2AB6D4AA008B7967 /* CustomFlutterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E129E2AB6D4AA008B7967 /* CustomFlutterViewController.m */; };
+		C67E12AB2AB6D4AA008B7967 /* THRPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = C67E129F2AB6D4AA008B7967 /* THRPeople.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +34,6 @@
 		46D1768A2671AF9B00C959B8 /* FlutterBoostPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlutterBoostPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D1768D2671AF9B00C959B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46D1768E2671AF9B00C959B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		46D176932671AF9B00C959B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		46D176942671AF9B00C959B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		46D176972671AF9B00C959B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46D176992671AF9E00C959B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46D1769C2671AF9E00C959B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +42,26 @@
 		46D176AC2671B34700C959B8 /* Func.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Func.h; sourceTree = "<group>"; };
 		61B75D9267A6B4FC20D964D1 /* Pods-FlutterBoostPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlutterBoostPro.release.xcconfig"; path = "Target Support Files/Pods-FlutterBoostPro/Pods-FlutterBoostPro.release.xcconfig"; sourceTree = "<group>"; };
 		9B2744B535295168065992A4 /* Pods_FlutterBoostPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlutterBoostPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67E12892AB6D494008B7967 /* FlutterBoostPro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlutterBoostPro-Bridging-Header.h"; sourceTree = "<group>"; };
+		C67E128A2AB6D495008B7967 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C67E128E2AB6D4AA008B7967 /* SwiftModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftModule.swift; sourceTree = "<group>"; };
+		C67E128F2AB6D4AA008B7967 /* Page5View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5View.swift; sourceTree = "<group>"; };
+		C67E12912AB6D4AA008B7967 /* Module2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module2.m; sourceTree = "<group>"; };
+		C67E12922AB6D4AA008B7967 /* ThrioViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrioViewController2.h; sourceTree = "<group>"; };
+		C67E12932AB6D4AA008B7967 /* Module2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module2.h; sourceTree = "<group>"; };
+		C67E12942AB6D4AA008B7967 /* ThrioViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrioViewController2.m; sourceTree = "<group>"; };
+		C67E12952AB6D4AA008B7967 /* SampleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleModule.h; sourceTree = "<group>"; };
+		C67E12962AB6D4AA008B7967 /* SampleModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleModule.m; sourceTree = "<group>"; };
+		C67E12982AB6D4AA008B7967 /* Module1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module1.m; sourceTree = "<group>"; };
+		C67E12992AB6D4AA008B7967 /* ThrioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrioViewController.m; sourceTree = "<group>"; };
+		C67E129A2AB6D4AA008B7967 /* Module1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module1.h; sourceTree = "<group>"; };
+		C67E129B2AB6D4AA008B7967 /* ThrioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrioViewController.h; sourceTree = "<group>"; };
+		C67E129C2AB6D4AA008B7967 /* CustomFlutterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomFlutterViewController.h; path = ../../../flutter_thrio/example/ios/Runner/FlutterSupportFiles/CustomFlutterViewController.h; sourceTree = "<group>"; };
+		C67E129D2AB6D4AA008B7967 /* MainModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainModule.m; path = ../../../flutter_thrio/example/ios/Runner/FlutterSupportFiles/MainModule.m; sourceTree = "<group>"; };
+		C67E129E2AB6D4AA008B7967 /* CustomFlutterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomFlutterViewController.m; path = ../../../flutter_thrio/example/ios/Runner/FlutterSupportFiles/CustomFlutterViewController.m; sourceTree = "<group>"; };
+		C67E129F2AB6D4AA008B7967 /* THRPeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THRPeople.m; path = ../../../flutter_thrio/example/ios/Runner/FlutterSupportFiles/THRPeople.m; sourceTree = "<group>"; };
+		C67E12A02AB6D4AA008B7967 /* MainModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainModule.h; path = ../../../flutter_thrio/example/ios/Runner/FlutterSupportFiles/MainModule.h; sourceTree = "<group>"; };
+		C67E12A12AB6D4AA008B7967 /* THRPeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THRPeople.h; path = ../../../flutter_thrio/example/ios/Runner/FlutterSupportFiles/THRPeople.h; sourceTree = "<group>"; };
 		F1ABC517ED80889113E49B94 /* Pods-FlutterBoostPro.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlutterBoostPro.test.xcconfig"; path = "Target Support Files/Pods-FlutterBoostPro/Pods-FlutterBoostPro.test.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,12 +100,23 @@
 			children = (
 				46D1768D2671AF9B00C959B8 /* AppDelegate.h */,
 				46D1768E2671AF9B00C959B8 /* AppDelegate.m */,
-				46D176932671AF9B00C959B8 /* ViewController.h */,
-				46D176942671AF9B00C959B8 /* ViewController.m */,
+				C67E129C2AB6D4AA008B7967 /* CustomFlutterViewController.h */,
+				C67E129E2AB6D4AA008B7967 /* CustomFlutterViewController.m */,
+				C67E128A2AB6D495008B7967 /* File.swift */,
+				C67E12892AB6D494008B7967 /* FlutterBoostPro-Bridging-Header.h */,
 				46D1769E2671AF9E00C959B8 /* Info-Debug.plist */,
-				4660F47926B3AEF90007D2F5 /* Info-Test.plist */,
 				46BC4CF526944D6B00B07F8E /* Info-Release.plist */,
+				4660F47926B3AEF90007D2F5 /* Info-Test.plist */,
+				C67E12A02AB6D4AA008B7967 /* MainModule.h */,
+				C67E129D2AB6D4AA008B7967 /* MainModule.m */,
+				46D176992671AF9E00C959B8 /* Assets.xcassets */,
+				46D1769F2671AF9E00C959B8 /* main.m */,
+				46D176962671AF9B00C959B8 /* Main.storyboard */,
+				46D1769B2671AF9E00C959B8 /* LaunchScreen.storyboard */,
 				C61BA0D02AAEF3180050148C /* Others */,
+				C67E128C2AB6D4AA008B7967 /* SampleModule */,
+				C67E12A12AB6D4AA008B7967 /* THRPeople.h */,
+				C67E129F2AB6D4AA008B7967 /* THRPeople.m */,
 			);
 			path = FlutterBoostPro;
 			sourceTree = "<group>";
@@ -103,14 +142,54 @@
 		C61BA0D02AAEF3180050148C /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				46D176992671AF9E00C959B8 /* Assets.xcassets */,
-				46D1769F2671AF9E00C959B8 /* main.m */,
 				46D176AC2671B34700C959B8 /* Func.h */,
-				46D176962671AF9B00C959B8 /* Main.storyboard */,
-				46D1769B2671AF9E00C959B8 /* LaunchScreen.storyboard */,
 			);
 			name = Others;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C67E128C2AB6D4AA008B7967 /* SampleModule */ = {
+			isa = PBXGroup;
+			children = (
+				C67E128D2AB6D4AA008B7967 /* SwiftModule */,
+				C67E12902AB6D4AA008B7967 /* Module2 */,
+				C67E12952AB6D4AA008B7967 /* SampleModule.h */,
+				C67E12962AB6D4AA008B7967 /* SampleModule.m */,
+				C67E12972AB6D4AA008B7967 /* Module1 */,
+			);
+			name = SampleModule;
+			path = ../../../flutter_thrio/example/ios/Runner/FlutterSupportFiles/SampleModule;
+			sourceTree = "<group>";
+		};
+		C67E128D2AB6D4AA008B7967 /* SwiftModule */ = {
+			isa = PBXGroup;
+			children = (
+				C67E128E2AB6D4AA008B7967 /* SwiftModule.swift */,
+				C67E128F2AB6D4AA008B7967 /* Page5View.swift */,
+			);
+			path = SwiftModule;
+			sourceTree = "<group>";
+		};
+		C67E12902AB6D4AA008B7967 /* Module2 */ = {
+			isa = PBXGroup;
+			children = (
+				C67E12912AB6D4AA008B7967 /* Module2.m */,
+				C67E12922AB6D4AA008B7967 /* ThrioViewController2.h */,
+				C67E12932AB6D4AA008B7967 /* Module2.h */,
+				C67E12942AB6D4AA008B7967 /* ThrioViewController2.m */,
+			);
+			path = Module2;
+			sourceTree = "<group>";
+		};
+		C67E12972AB6D4AA008B7967 /* Module1 */ = {
+			isa = PBXGroup;
+			children = (
+				C67E12982AB6D4AA008B7967 /* Module1.m */,
+				C67E12992AB6D4AA008B7967 /* ThrioViewController.m */,
+				C67E129A2AB6D4AA008B7967 /* Module1.h */,
+				C67E129B2AB6D4AA008B7967 /* ThrioViewController.h */,
+			);
+			path = Module1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +226,7 @@
 				TargetAttributes = {
 					46D176892671AF9B00C959B8 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -249,8 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D176952671AF9B00C959B8 /* ViewController.m in Sources */,
+				C67E12A52AB6D4AA008B7967 /* ThrioViewController2.m in Sources */,
+				C67E12AA2AB6D4AA008B7967 /* CustomFlutterViewController.m in Sources */,
+				C67E12A42AB6D4AA008B7967 /* Module2.m in Sources */,
+				C67E12A22AB6D4AA008B7967 /* SwiftModule.swift in Sources */,
+				C67E12AB2AB6D4AA008B7967 /* THRPeople.m in Sources */,
+				C67E128B2AB6D495008B7967 /* File.swift in Sources */,
+				C67E12A32AB6D4AA008B7967 /* Page5View.swift in Sources */,
+				C67E12A82AB6D4AA008B7967 /* ThrioViewController.m in Sources */,
 				46D1768F2671AF9B00C959B8 /* AppDelegate.m in Sources */,
+				C67E12A72AB6D4AA008B7967 /* Module1.m in Sources */,
+				C67E12A62AB6D4AA008B7967 /* SampleModule.m in Sources */,
+				C67E12A92AB6D4AA008B7967 /* MainModule.m in Sources */,
 				46D176A02671AF9E00C959B8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q6YSM6ELL4;
 				INFOPLIST_FILE = "FlutterBoostPro/Info-$(CONFIGURATION).plist";
@@ -348,6 +439,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yshoufa.ant2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlutterBoostPro/FlutterBoostPro-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Test;
@@ -475,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDebug;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q6YSM6ELL4;
 				INFOPLIST_FILE = "FlutterBoostPro/Info-$(CONFIGURATION).plist";
@@ -484,6 +578,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yshoufa.ant2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlutterBoostPro/FlutterBoostPro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -494,6 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q6YSM6ELL4;
 				INFOPLIST_FILE = "FlutterBoostPro/Info-$(CONFIGURATION).plist";
@@ -503,6 +601,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yshoufa.ant2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlutterBoostPro/FlutterBoostPro-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

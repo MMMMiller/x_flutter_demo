@@ -24,7 +24,9 @@ abstract class BasePage<T extends StatefulWidget> extends BaseBlocState<T>
         fontWeight: FontWeight.w600,
       ),
       leading: GestureDetector(
-        onTap: ThrioNavigator.pop,
+        onTap: (){
+          ThrioNavigator.pop();
+        },
         child: const Icon(
           Icons.arrow_back_ios,
           size: 20,
