@@ -15,18 +15,6 @@
 		46D1769A2671AF9E00C959B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46D176992671AF9E00C959B8 /* Assets.xcassets */; };
 		46D1769D2671AF9E00C959B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D1769B2671AF9E00C959B8 /* LaunchScreen.storyboard */; };
 		46D176A02671AF9E00C959B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D1769F2671AF9E00C959B8 /* main.m */; };
-		46D176A82671B2A400C959B8 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176A72671B2A400C959B8 /* BasicViewController.m */; };
-		46D176AB2671B2B800C959B8 /* BasicNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176AA2671B2B800C959B8 /* BasicNavigationController.m */; };
-		46D176B02671BC8500C959B8 /* FlutterModuleChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176AF2671BC8500C959B8 /* FlutterModuleChannel.m */; };
-		46D176B32671BDF100C959B8 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176B22671BDF100C959B8 /* NativeViewController.m */; };
-		46D176B62671BEC100C959B8 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176B52671BEC100C959B8 /* UIButton+Extension.m */; };
-		46D176B92671BFFE00C959B8 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176B82671BFFE00C959B8 /* UIView+Extension.m */; };
-		46D176BC2671C06200C959B8 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176BB2671C06200C959B8 /* NSObject+Extension.m */; };
-		46D176BF2671C4FD00C959B8 /* FlutterModuleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176BE2671C4FD00C959B8 /* FlutterModuleHelper.m */; };
-		46D176C22671C51800C959B8 /* FlutterModuleNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176C12671C51800C959B8 /* FlutterModuleNavigator.m */; };
-		46D176C52671C55100C959B8 /* FlutterModuleAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176C42671C55100C959B8 /* FlutterModuleAgent.m */; };
-		46D176C82671C57100C959B8 /* FlutterModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D176C72671C57100C959B8 /* FlutterModuleViewController.m */; };
-		C61BA0CD2AAB198D0050148C /* SearchResultPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C61BA0CC2AAB198D0050148C /* SearchResultPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,34 +31,9 @@
 		46D1769C2671AF9E00C959B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46D1769E2671AF9E00C959B8 /* Info-Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		46D1769F2671AF9E00C959B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46D176A62671B2A400C959B8 /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
-		46D176A72671B2A400C959B8 /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
-		46D176A92671B2B800C959B8 /* BasicNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicNavigationController.h; sourceTree = "<group>"; };
-		46D176AA2671B2B800C959B8 /* BasicNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicNavigationController.m; sourceTree = "<group>"; };
 		46D176AC2671B34700C959B8 /* Func.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Func.h; sourceTree = "<group>"; };
-		46D176AE2671BC8500C959B8 /* FlutterModuleChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterModuleChannel.h; sourceTree = "<group>"; };
-		46D176AF2671BC8500C959B8 /* FlutterModuleChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterModuleChannel.m; sourceTree = "<group>"; };
-		46D176B12671BDF100C959B8 /* NativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
-		46D176B22671BDF100C959B8 /* NativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
-		46D176B42671BEC100C959B8 /* UIButton+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
-		46D176B52671BEC100C959B8 /* UIButton+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
-		46D176B72671BFFE00C959B8 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		46D176B82671BFFE00C959B8 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		46D176BA2671C06200C959B8 /* NSObject+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
-		46D176BB2671C06200C959B8 /* NSObject+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
-		46D176BD2671C4FD00C959B8 /* FlutterModuleHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterModuleHelper.h; sourceTree = "<group>"; };
-		46D176BE2671C4FD00C959B8 /* FlutterModuleHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterModuleHelper.m; sourceTree = "<group>"; };
-		46D176C02671C51800C959B8 /* FlutterModuleNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterModuleNavigator.h; sourceTree = "<group>"; };
-		46D176C12671C51800C959B8 /* FlutterModuleNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterModuleNavigator.m; sourceTree = "<group>"; };
-		46D176C32671C55100C959B8 /* FlutterModuleAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterModuleAgent.h; sourceTree = "<group>"; };
-		46D176C42671C55100C959B8 /* FlutterModuleAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterModuleAgent.m; sourceTree = "<group>"; };
-		46D176C62671C57100C959B8 /* FlutterModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterModuleViewController.h; sourceTree = "<group>"; };
-		46D176C72671C57100C959B8 /* FlutterModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterModuleViewController.m; sourceTree = "<group>"; };
-		46D176C92671C73D00C959B8 /* FlutterModuleConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterModuleConstants.h; sourceTree = "<group>"; };
 		61B75D9267A6B4FC20D964D1 /* Pods-FlutterBoostPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlutterBoostPro.release.xcconfig"; path = "Target Support Files/Pods-FlutterBoostPro/Pods-FlutterBoostPro.release.xcconfig"; sourceTree = "<group>"; };
 		9B2744B535295168065992A4 /* Pods_FlutterBoostPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlutterBoostPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C61BA0CB2AAB198D0050148C /* SearchResultPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultPage.h; sourceTree = "<group>"; };
-		C61BA0CC2AAB198D0050148C /* SearchResultPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultPage.m; sourceTree = "<group>"; };
 		F1ABC517ED80889113E49B94 /* Pods-FlutterBoostPro.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlutterBoostPro.test.xcconfig"; path = "Target Support Files/Pods-FlutterBoostPro/Pods-FlutterBoostPro.test.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,12 +70,8 @@
 		46D1768C2671AF9B00C959B8 /* FlutterBoostPro */ = {
 			isa = PBXGroup;
 			children = (
-				C61BA0CA2AAB11E90050148C /* Base */,
-				C61BA0C82AAB11230050148C /* Extension */,
-				46D176AD2671BC4E00C959B8 /* FlutterModule */,
 				46D1768D2671AF9B00C959B8 /* AppDelegate.h */,
 				46D1768E2671AF9B00C959B8 /* AppDelegate.m */,
-				C61BA0CF2AAEF2E40050148C /* DemoPage */,
 				46D176932671AF9B00C959B8 /* ViewController.h */,
 				46D176942671AF9B00C959B8 /* ViewController.m */,
 				46D1769E2671AF9E00C959B8 /* Info-Debug.plist */,
@@ -121,24 +80,6 @@
 				C61BA0D02AAEF3180050148C /* Others */,
 			);
 			path = FlutterBoostPro;
-			sourceTree = "<group>";
-		};
-		46D176AD2671BC4E00C959B8 /* FlutterModule */ = {
-			isa = PBXGroup;
-			children = (
-				46D176AE2671BC8500C959B8 /* FlutterModuleChannel.h */,
-				46D176AF2671BC8500C959B8 /* FlutterModuleChannel.m */,
-				46D176BD2671C4FD00C959B8 /* FlutterModuleHelper.h */,
-				46D176BE2671C4FD00C959B8 /* FlutterModuleHelper.m */,
-				46D176C02671C51800C959B8 /* FlutterModuleNavigator.h */,
-				46D176C12671C51800C959B8 /* FlutterModuleNavigator.m */,
-				46D176C32671C55100C959B8 /* FlutterModuleAgent.h */,
-				46D176C42671C55100C959B8 /* FlutterModuleAgent.m */,
-				46D176C62671C57100C959B8 /* FlutterModuleViewController.h */,
-				46D176C72671C57100C959B8 /* FlutterModuleViewController.m */,
-				46D176C92671C73D00C959B8 /* FlutterModuleConstants.h */,
-			);
-			path = FlutterModule;
 			sourceTree = "<group>";
 		};
 		77DF2D111548A0E93F4355E2 /* Pods */ = {
@@ -157,41 +98,6 @@
 				9B2744B535295168065992A4 /* Pods_FlutterBoostPro.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C61BA0C82AAB11230050148C /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				46D176B42671BEC100C959B8 /* UIButton+Extension.h */,
-				46D176B52671BEC100C959B8 /* UIButton+Extension.m */,
-				46D176B72671BFFE00C959B8 /* UIView+Extension.h */,
-				46D176B82671BFFE00C959B8 /* UIView+Extension.m */,
-				46D176BA2671C06200C959B8 /* NSObject+Extension.h */,
-				46D176BB2671C06200C959B8 /* NSObject+Extension.m */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		C61BA0CA2AAB11E90050148C /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				46D176A62671B2A400C959B8 /* BasicViewController.h */,
-				46D176A72671B2A400C959B8 /* BasicViewController.m */,
-				46D176A92671B2B800C959B8 /* BasicNavigationController.h */,
-				46D176AA2671B2B800C959B8 /* BasicNavigationController.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		C61BA0CF2AAEF2E40050148C /* DemoPage */ = {
-			isa = PBXGroup;
-			children = (
-				46D176B12671BDF100C959B8 /* NativeViewController.h */,
-				46D176B22671BDF100C959B8 /* NativeViewController.m */,
-				C61BA0CB2AAB198D0050148C /* SearchResultPage.h */,
-				C61BA0CC2AAB198D0050148C /* SearchResultPage.m */,
-			);
-			path = DemoPage;
 			sourceTree = "<group>";
 		};
 		C61BA0D02AAEF3180050148C /* Others */ = {
@@ -343,21 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D176BF2671C4FD00C959B8 /* FlutterModuleHelper.m in Sources */,
-				46D176C82671C57100C959B8 /* FlutterModuleViewController.m in Sources */,
-				46D176B92671BFFE00C959B8 /* UIView+Extension.m in Sources */,
-				46D176C22671C51800C959B8 /* FlutterModuleNavigator.m in Sources */,
-				46D176B02671BC8500C959B8 /* FlutterModuleChannel.m in Sources */,
-				46D176B62671BEC100C959B8 /* UIButton+Extension.m in Sources */,
-				46D176B32671BDF100C959B8 /* NativeViewController.m in Sources */,
-				C61BA0CD2AAB198D0050148C /* SearchResultPage.m in Sources */,
 				46D176952671AF9B00C959B8 /* ViewController.m in Sources */,
-				46D176A82671B2A400C959B8 /* BasicViewController.m in Sources */,
 				46D1768F2671AF9B00C959B8 /* AppDelegate.m in Sources */,
-				46D176BC2671C06200C959B8 /* NSObject+Extension.m in Sources */,
 				46D176A02671AF9E00C959B8 /* main.m in Sources */,
-				46D176AB2671B2B800C959B8 /* BasicNavigationController.m in Sources */,
-				46D176C52671C55100C959B8 /* FlutterModuleAgent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
