@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_module/app_root_page.dart';
+import 'package:flutter_module/module/about_us/page/about_us_page.dart';
+import 'package:flutter_module/module/cms/page/cms_page.dart';
 import 'package:flutter_module/module/user/page/login_page.dart';
 import 'package:flutter_module/module/user/page/reset_pwd_page.dart';
 
@@ -20,6 +22,20 @@ class AppRouter {
       return CupertinoPageRoute(
         settings: settings,
         builder: (_) => AppRootPage(),
+      );
+    },
+
+
+    'cms/cms_page': (settings, uniqueId) {
+      return CupertinoPageRoute(
+        settings: settings,
+        builder: (_) => CMSPage(),
+      );
+    },
+    'user/about_us_page': (settings, uniqueId) {
+      return CupertinoPageRoute(
+        settings: settings,
+        builder: (_) => AboutUsPage(),
       );
     },
 

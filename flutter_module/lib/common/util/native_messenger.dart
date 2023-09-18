@@ -9,11 +9,24 @@ class NativeMessenger {
 
   NativeMessenger._init() {
     _initMessageChannel();
+    _initNativeNetChannel();
   }
 
   final _methodChannel = const MethodChannel('app_global_channel');
+  final _nativeNetChannel = const MethodChannel('native_net_kit');
 
   MethodChannel get channel => _methodChannel;
+
+  MethodChannel get nativeNetChannel => _nativeNetChannel;
+
+  /// =================== app_global_channel ===================
+  Future<String> getAppVersion() async {
+    return await _methodChannel.invokeMethod('get_app_version');
+  }
+
+  Future<String> checkUpgrade() async {
+    return await _methodChannel.invokeMethod('check_upgrade');
+  }
 
   /// 跟Native通信交互
   void _initMessageChannel() {
@@ -30,6 +43,27 @@ class NativeMessenger {
       } else if (call.method == 'exit_current_page') {
         BoostNavigator.instance.pop();
       }
+      return Future<dynamic>.value();
+    });
+  }
+
+  /// =================== native_net_kit ===================
+  /// 触发原生网络请求
+  Future<String> invokeNativeNetRequest({
+    required String requestUrl,
+    required String requestType,
+    required Map<String, dynamic>? requestParams,
+  }) async {
+    Map reqestInfo = {
+      'requestUrl': requestUrl,
+      'requestType': requestType,
+      'requestParams': requestParams,
+    };
+    return await _nativeNetChannel.invokeMethod('native_net_kit', reqestInfo);
+  }
+
+  void _initNativeNetChannel() {
+    _nativeNetChannel.setMethodCallHandler((MethodCall call) {
       return Future<dynamic>.value();
     });
   }

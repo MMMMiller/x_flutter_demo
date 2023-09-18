@@ -3,6 +3,7 @@
 ///
 /// @author azhon
 import 'package:flutter_module/common/api/api_convert.dart';
+import 'package:flutter_module/common/api/native_net_engine.dart';
 import 'package:todo_flutter/todo_flutter.dart';
 
 class ApiProvider extends BaseNetProvider {
@@ -16,16 +17,16 @@ class ApiProvider extends BaseNetProvider {
     return _instance!;
   }
 
-  DioEngine dioEngine = DioEngine('http://demo.dev.beicaizs.com/');
+  NativeNetEngine nativeNetEngine = NativeNetEngine('http://demo.dev.beicaizs.com/');
   ApiConvert apiConvert = ApiConvert();
 
   ApiProvider._internal() {
     // dioEngine.setProxy('192.168.110.7', 8888);
-    dioEngine.addInterceptor(TestInterceptor());
+    nativeNetEngine.addInterceptor(TestInterceptor());
   }
 
   @override
-  BaseNetEngine get engine => dioEngine;
+  BaseNetEngine get engine => nativeNetEngine;
 
   @override
   BaseConvert get convert => apiConvert;

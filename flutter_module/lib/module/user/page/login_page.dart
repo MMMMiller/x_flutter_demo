@@ -114,7 +114,7 @@ class LoginPageState extends BaseState<LoginPage> with WidgetsBindingObserver {
                             bloc: loginBloc.loginBtnValidBloc,
                             child: (context, btnState) {
                               return CommonButton(
-                                '登录',
+                                '登录123',
                                 fontSize: 14,
                                 disable: !btnState!,
                                 radius: 4,

@@ -40,18 +40,17 @@ class _AppRootPage extends BaseState<AppRootPage> {
                   GestureDetector(
                     behavior: HitTestBehavior.opaque,
                     onTap: () => {
+                      // BoostNavigator.instance
+                      //     .push('main/cms_page', withContainer: true)
+
                       BoostNavigator.instance
-                          .push('user/login_page', withContainer: true)
+                          .push("AboutViewController", arguments: {"a": "a", "b": "a"})
                     },
                     child: Text(
-                      "跳转登陆页",
+                      "跳转原生关于我们页",
                       style: TextStyle(
                         fontSize: 15,
-                        color: ColorUtil.dynamicColor(
-                          context: context,
-                          light: Colors.black45,
-                          dark: Colors.white,
-                        ),
+                        color: Colors.black45,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
@@ -63,19 +62,15 @@ class _AppRootPage extends BaseState<AppRootPage> {
                     behavior: HitTestBehavior.opaque,
                     onTap: () => {
                       BoostNavigator.instance.push(
-                        'user/login_page',
+                        'user/about_us_page',
                         withContainer: true,
                       )
                     },
                     child: Text(
-                      "跳转登陆页",
+                      "跳转Flutter关于我们页",
                       style: TextStyle(
                         fontSize: 15,
-                        color: ColorUtil.dynamicColor(
-                          context: context,
-                          light: Colors.black45,
-                          dark: Colors.white,
-                        ),
+                        color: Colors.black45,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
@@ -93,11 +88,28 @@ class _AppRootPage extends BaseState<AppRootPage> {
                       "给原生发消息",
                       style: TextStyle(
                         fontSize: 15,
-                        color: ColorUtil.dynamicColor(
-                          context: context,
-                          light: Colors.black45,
-                          dark: Colors.white,
-                        ),
+                        color: Colors.black45,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(
+                    height: 48,
+                  ),
+                  GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () => {
+                      BoostNavigator.instance.push(
+                        'user/login_page',
+                        withContainer: true,
+                      )
+                    },
+                    child: Text(
+                      "跳转登录页",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black45,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
