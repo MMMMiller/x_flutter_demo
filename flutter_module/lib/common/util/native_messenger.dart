@@ -12,14 +12,33 @@ class NativeMessenger {
     _initNativeNetChannel();
   }
 
-  final _methodChannel = const MethodChannel('app_global_channel');
   final _nativeNetChannel = const MethodChannel('native_net_kit');
-
-  MethodChannel get channel => _methodChannel;
-
   MethodChannel get nativeNetChannel => _nativeNetChannel;
+  /// =================== native_net_kit ===================
+  /// 触发原生网络请求
+  Future<String> invokeNativeNetRequest({
+    required String requestUrl,
+    required String requestType,
+    required Map<String, dynamic>? requestParams,
+  }) async {
+    Map reqestInfo = {
+      'requestUrl': requestUrl,
+      'requestType': requestType,
+      'requestParams': requestParams,
+    };
+    return await _nativeNetChannel.invokeMethod('native_net_kit', reqestInfo);
+  }
+
+  void _initNativeNetChannel() {
+    _nativeNetChannel.setMethodCallHandler((MethodCall call) {
+      return Future<dynamic>.value();
+    });
+  }
+
 
   /// =================== app_global_channel ===================
+  final _methodChannel = const MethodChannel('app_global_channel');
+  MethodChannel get channel => _methodChannel;
   Future<String> getAppVersion() async {
     return await _methodChannel.invokeMethod('get_app_version');
   }
@@ -43,27 +62,6 @@ class NativeMessenger {
       } else if (call.method == 'exit_current_page') {
         BoostNavigator.instance.pop();
       }
-      return Future<dynamic>.value();
-    });
-  }
-
-  /// =================== native_net_kit ===================
-  /// 触发原生网络请求
-  Future<String> invokeNativeNetRequest({
-    required String requestUrl,
-    required String requestType,
-    required Map<String, dynamic>? requestParams,
-  }) async {
-    Map reqestInfo = {
-      'requestUrl': requestUrl,
-      'requestType': requestType,
-      'requestParams': requestParams,
-    };
-    return await _nativeNetChannel.invokeMethod('native_net_kit', reqestInfo);
-  }
-
-  void _initNativeNetChannel() {
-    _nativeNetChannel.setMethodCallHandler((MethodCall call) {
       return Future<dynamic>.value();
     });
   }
