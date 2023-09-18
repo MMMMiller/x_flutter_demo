@@ -9,36 +9,13 @@ class NativeMessenger {
 
   NativeMessenger._init() {
     _initMessageChannel();
-    _initNativeNetChannel();
   }
-
-  final _nativeNetChannel = const MethodChannel('native_net_kit');
-  MethodChannel get nativeNetChannel => _nativeNetChannel;
-  /// =================== native_net_kit ===================
-  /// 触发原生网络请求
-  Future<String> invokeNativeNetRequest({
-    required String requestUrl,
-    required String requestType,
-    required Map<String, dynamic>? requestParams,
-  }) async {
-    Map reqestInfo = {
-      'requestUrl': requestUrl,
-      'requestType': requestType,
-      'requestParams': requestParams,
-    };
-    return await _nativeNetChannel.invokeMethod('native_net_kit', reqestInfo);
-  }
-
-  void _initNativeNetChannel() {
-    _nativeNetChannel.setMethodCallHandler((MethodCall call) {
-      return Future<dynamic>.value();
-    });
-  }
-
 
   /// =================== app_global_channel ===================
   final _methodChannel = const MethodChannel('app_global_channel');
+
   MethodChannel get channel => _methodChannel;
+
   Future<String> getAppVersion() async {
     return await _methodChannel.invokeMethod('get_app_version');
   }

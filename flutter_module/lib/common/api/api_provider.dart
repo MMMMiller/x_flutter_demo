@@ -17,12 +17,12 @@ class ApiProvider extends BaseNetProvider {
     return _instance!;
   }
 
-  NativeNetEngine nativeNetEngine = NativeNetEngine('http://demo.dev.beicaizs.com/');
+  NativeNetEngine nativeNetEngine =
+      NativeNetEngine('http://demo.dev.beicaizs.com/');
   ApiConvert apiConvert = ApiConvert();
 
   ApiProvider._internal() {
     // dioEngine.setProxy('192.168.110.7', 8888);
-    nativeNetEngine.addInterceptor(TestInterceptor());
   }
 
   @override

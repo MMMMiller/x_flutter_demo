@@ -26,6 +26,9 @@ dependencies:
     git:
       url: https://github.com/azhon/todo-flutter
       ref: 1.0.0
+  native_net_flutter_kit:
+    git:
+      url: https://github.com/ZhongXueGao/native_net_flutter_kit
 
   flutter_localizations:
     sdk: flutter
